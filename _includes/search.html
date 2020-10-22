@@ -1,0 +1,69 @@
+<div id="searchOverlay">
+	<input type="text" id="searchInput">
+	<div id="baseResult" class="searchResult">
+			<a href="#">
+			<h1>Titulo</h1>
+			<h2>Data</h2>
+			<h3>Tags</h3>
+			</a>
+	</div>
+	<div id="searchResults">
+	
+	</div>
+</div>
+
+<script type=text/javascript>
+document.getElementById("searchButton").addEventListener("click", toogleSearch);
+document.getElementById("searchOverlay").style.display = "none";
+
+function toogleSearch(e){
+	var searchOverlay = document.getElementById("searchOverlay");
+	if(searchOverlay.style.display == "flex"){
+		searchOverlay.style.display = "none";
+	}else{
+		searchOverlay.style.display = "flex"
+	}
+}
+
+document.getElementById("searchInput").addEventListener("input", searchPosts);
+var searchValue;
+var posts;
+fetch("/postDB.json")
+		.then(response => response.json())
+		.then(data => posts = data);
+var baseNode = document.getElementById("baseResult")
+		.cloneNode(true);
+		baseNode.removeAttribute("id");
+var resultsDiv = document.getElementById("searchResults");
+function searchPosts(e){
+		resultsDiv.innerHTML = "";
+	console.log(e.target.value);
+		searchValue = e.target.value;
+
+		result = posts.filter(postFilter);
+		console.log(result);
+		for(var i = 0; i < result.length; i++){
+				var node = baseNode.cloneNode(true);
+				node.children[0].setAttribute("href", result[i].url);
+				var textInfos = node.children[0].children;
+				textInfos[0].innerText = result[i].title;
+				textInfos[1].innerText = result[i].date;
+				textInfos[2].innerText = result[i].tags;
+			resultsDiv.appendChild(node);
+		}
+}
+
+function postFilter(value){
+
+		try{
+		if(value.title.includes(searchValue)) return true;
+		for(var i = 0; i< value.tags.length; i++){
+			if(value.tags[i].includes(searchValue)) return true;
+		}
+		}
+		catch (e){
+				//console.log(e);
+		}
+		return false;
+}
+</script>
