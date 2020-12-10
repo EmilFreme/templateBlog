@@ -5,9 +5,32 @@ layout: default
 <div class="mainWrapper" style="margin-top:50px">
 <div class="row">
 	<div class="col-2 indice-aula">
-		Indice:
+		Aulas
 		<ol>
-		{% for post in site.jogos_digitais %}
+		{% assign aulas = site.jogos_digitais | where: "type","aula" %}
+		{% for post in aulas %}
+			<li>
+				<a href="{{ post.url }}" title="{{post.title}}">
+					{{post.title}}
+				</a>
+			</li>
+		{% endfor %}
+		</ol>
+		Handouts
+		<ol>
+		{% assign aulas = site.jogos_digitais | where: "type","handout" %}
+		{% for post in aulas %}
+			<li>
+				<a href="{{ post.url }}" title="{{post.title}}">
+					{{post.title}}
+				</a>
+			</li>
+		{% endfor %}
+		</ol>
+		Vídeos
+		<ol>
+		{% assign aulas = site.jogos_digitais | where: "type","video" %}
+		{% for post in aulas %}
 			<li>
 				<a href="{{ post.url }}" title="{{post.title}}">
 					{{post.title}}
@@ -19,7 +42,7 @@ layout: default
 	<div class="col-8 aula_content">
 		<div class="post_header">
 		<div class="post_header--content">
-		<h2>Aula {{ page.aula }}</h2>
+		<h2>{{page.type | capitalize }} {{ page.aula }}</h2>
 		<h1 style="border:none">{{ page.title }}</h1>
 		</div>
 		</div>
@@ -35,10 +58,10 @@ layout: default
 <!--
 <div id="relatedPosts">
 	<h1>Outros Posts</h1>
-	
+
 	<div class="mainWrapper">
 		<div class="row first-row">
-			{% if page.next %}	
+			{% if page.next %}
 			<a href="{{ page.next.url }}" class="article-card col-3">
 				<div class="article-card__title">
 					<div class="title--text">
@@ -57,7 +80,7 @@ layout: default
 				</div>
 			</a>
 			{% endif %}
-			{% if page.previous %}	
+			{% if page.previous %}
 			<a href="{{ page.previous.url }}" class="article-card col-3">
 				<div class="article-card__title">
 					<div class="title--text">

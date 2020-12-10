@@ -52,12 +52,12 @@ header{
         color: $branco;
         text-decoration: none;
         margin:10px;
-    
+
         &:hover{
             text-decoration: underline;
         }
     }
-    
+
 }
 
 
@@ -157,7 +157,7 @@ footer{
 				font-size: 14pt;
 				font-weight: $bold-face;
 				border-bottom: 1px solid $branco;
-				
+
 				height: 2.5em;
 				overflow: hidden;
 			}
@@ -183,7 +183,7 @@ footer{
 
 		.title--text{
 			background-color:$vinho;
-			
+
 			.article-title{
 				font-size: 20pt;
 			}
@@ -236,7 +236,7 @@ footer{
 }
 .post_content, .aula_content{
 		padding:5px;
-		h1, h2, h3, h4, h5, h6, p{margin-bottom:1.5em;}
+		h1, h2, h3, h4, h5, h6, p{margin-bottom:1.5em; /*margin-top:1.2em;*/}
 		h1{
 			font-size:2em;
 			font-weight:$bolder-face;
@@ -253,6 +253,7 @@ footer{
 			font-size:1.6em;
 			font-weight:$thin-face;
 			padding-bottom:5px;
+			border-top:1px dashed $vinho
 		}
 		h4{
 			font-size:1.2em;
@@ -312,11 +313,11 @@ footer{
 			content:attr(data-filename);
 			line-height:1.5em;
 	}
-	
+
 	img{
 		max-width:80%;
 		margin:0 auto;
-		display:block;	
+		display:block;
 	}
 
 }
@@ -347,7 +348,7 @@ footer{
 			display:none!important;
 		}
 
-		#searchResults{ 
+		#searchResults{
 				width:100%;
 		display: flex;
 		//justify-content:center;
@@ -413,7 +414,7 @@ footer{
 .dica{
 	border: solid 1px $aqua;
 	padding: 0.5em;
-	
+
 }
 
 .alerta::before{
@@ -430,7 +431,7 @@ footer{
 .alerta{
 	border: solid 1px $vermelho;
 	padding: 0.5em;
-	
+
 }
 
 .aviso::before{
@@ -447,7 +448,7 @@ footer{
 .aviso{
 	border: solid 1px $amarelo;
 	padding: 0.5em;
-	
+
 }
 
 .citacao::before{
