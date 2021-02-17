@@ -20,8 +20,13 @@ layout: default
 			| group_by:"type"
 			%}
 		{% for type in  sort_by_types %}
-		<li class="indice_type top_nav closed"> {{ type.name | capitalize}}s
-			<ol class="type_list closed">
+		{% if type.name ==  page.type %}
+			{% assign top_nav_status = "opened" %}
+		{% else %}
+			{% assign top_nav_status = "closed" %}
+		{% endif %}
+		<li class="indice_type top_nav {{top_nav_status}}"> {{ type.name | capitalize}}s
+			<ol class="type_list {{top_nav_status}}">
 			{% for post in type.items %}
 				<li>
 					<a href="{{ post.url }}" title="{{ post.title }}">
