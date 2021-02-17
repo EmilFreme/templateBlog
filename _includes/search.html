@@ -8,15 +8,15 @@
 			</a>
 	</div>
 	<div id="searchResults">
-	
+
 	</div>
 </div>
 
 <script type=text/javascript>
-document.getElementById("searchButton").addEventListener("click", toogleSearch);
+document.getElementById("searchButton").addEventListener("click", toggleSearch);
 document.getElementById("searchOverlay").style.display = "none";
 
-function toogleSearch(e){
+function toggleSearch(e){
 	var searchOverlay = document.getElementById("searchOverlay");
 	if(searchOverlay.style.display == "flex"){
 		searchOverlay.style.display = "none";

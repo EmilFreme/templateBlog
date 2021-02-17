@@ -208,6 +208,8 @@ footer{
 		flex-direction:column-reverse;
 }
 
+
+
 .post_header--content{
 		background-color: $vinho;
 		height:100px;
@@ -234,6 +236,26 @@ footer{
 	}
 
 }
+
+.aula_content {
+	padding-left:2em !important;
+	.post_header{
+		background: none;
+		margin-top:50px;
+		height: auto;
+	}
+
+	.post_header--content{
+		background: none;
+		color:$preto;
+
+		h1{
+			margin-bottom:0.2em;
+		}
+
+	}
+}
+
 .post_content, .aula_content{
 		padding:5px;
 		h1, h2, h3, h4, h5, h6, p{margin-bottom:1.5em; /*margin-top:1.2em;*/}
@@ -399,6 +421,51 @@ footer{
 	background-color: adjust-color($color: $cinza, $lightness: +70%);
 	padding: 1em;
 }
+
+.indice-aula a{
+	color: $preto;
+	transition: 1s;
+}
+
+.indice-aula a:hover{
+	color: $vermelho;
+}
+
+
+.top_nav{
+	cursor: pointer;
+	font-weight: $bold-face;
+}
+
+.indice_type{
+	min-height:2em;
+}
+
+.top_nav.closed::before{
+	content: "\2B9E";
+	float:right;
+}
+
+.top_nav.opened::before{
+	content: "\2B9F";
+	float:right;
+}
+
+.type_list{
+	font-weight: $regular-face;
+}
+
+.type_list.closed{
+	height:0;
+	overflow: hidden;
+	margin: 0;
+}
+
+.type_list.opened{
+	height:auto;
+	transition: all 1s;
+}
+
 
 .dica::before{
 	content: "Dica";

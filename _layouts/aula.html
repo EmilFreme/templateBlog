@@ -2,44 +2,40 @@
 layout: default
 ---
 <article>
-<div class="mainWrapper" style="margin-top:50px">
+<div class="aulaWrapper" style="margin-top:50px">
 <div class="row">
-	<div class="col-2 indice-aula">
-		Aulas
-		<ol>
-		{% assign aulas = site.jogos_digitais | where: "type","aula" %}
-		{% for post in aulas %}
-			<li>
-				<a href="{{ post.url }}" title="{{post.title}}">
-					{{post.title}}
-				</a>
-			</li>
+	<ul class="col-2 indice-aula">
+	{% assign without_types = site.jogos_digitais
+		| where: "type", empty		%}
+		{% for post in without_types %}
+		<li class="indice_type top_nav">
+			<a href="{{ post.url }}" title="{{ post.title }}">
+				{{ post.title }}
+			</a>
+		</li>
 		{% endfor %}
-		</ol>
-		Handouts
-		<ol>
-		{% assign aulas = site.jogos_digitais | where: "type","handout" %}
-		{% for post in aulas %}
-			<li>
-				<a href="{{ post.url }}" title="{{post.title}}">
-					{{post.title}}
-				</a>
-			</li>
+
+		{% assign sort_by_types = site.jogos_digitais
+			| where_exp: "aula", "aula.type"
+			| group_by:"type"
+			%}
+		{% for type in  sort_by_types %}
+		<li class="indice_type top_nav closed"> {{ type.name | capitalize}}s
+			<ol class="type_list closed">
+			{% for post in type.items %}
+				<li>
+					<a href="{{ post.url }}" title="{{ post.title }}">
+						{{ post.title }}
+					</a>
+				</li>
+			{% endfor %}
+			</ol>
+		</li>
 		{% endfor %}
-		</ol>
-		Vídeos
-		<ol>
-		{% assign aulas = site.jogos_digitais | where: "type","video" %}
-		{% for post in aulas %}
-			<li>
-				<a href="{{ post.url }}" title="{{post.title}}">
-					{{post.title}}
-				</a>
-			</li>
-		{% endfor %}
-		</ol>
-	</div>
+	</ul>
 	<div class="col-8 aula_content">
+
+
 		<div class="post_header">
 		<div class="post_header--content">
 		<h2>{{page.type | capitalize }} {{ page.aula }}</h2>
@@ -55,51 +51,19 @@ layout: default
 </div>
 </article>
 
-<!--
-<div id="relatedPosts">
-	<h1>Outros Posts</h1>
-
-	<div class="mainWrapper">
-		<div class="row first-row">
-			{% if page.next %}
-			<a href="{{ page.next.url }}" class="article-card col-3">
-				<div class="article-card__title">
-					<div class="title--text">
-						<p class="article-title">
-							{{ page.next.title }}
-						</p>
-						<p class="article-info">
-							{{ page.next.date | date_to_string }} : {{ page.next.tags }}
-						</p>
-					</div>
-				</div>
-				<div class="article-card__text">
-					<p>
-						{{ page.next.excerpt }}
-					</p>
-				</div>
-			</a>
-			{% endif %}
-			{% if page.previous %}
-			<a href="{{ page.previous.url }}" class="article-card col-3">
-				<div class="article-card__title">
-					<div class="title--text">
-						<p class="article-title">
-							{{ page.previous.title }}
-						</p>
-						<p class="article-info">
-							{{ page.previous.date | date_to_string }} : {{ page.previous.tags }}
-						</p>
-					</div>
-				</div>
-				<div class="article-card__text">
-					<p>
-						{{ page.previous.excerpt }}
-					</p>
-				</div>
-			</a>
-			{% endif %}
-		</div>
-	</div>
-</div>-->
 <script type="text/javascript" src="/js/centerImage.js"></script>
+<script type="text/javascript">
+	var elements = document.getElementsByClassName("top_nav")
+	for (var i = elements.length - 1; i >= 0; i--) {
+		elements[i].addEventListener("click", toggleList);
+	}
+
+	function toggleList(e) {
+		e.target.classList.toggle("closed");
+		e.target.classList.toggle("opened");
+		var d = e.target.firstElementChild;
+    	d.classList.toggle("closed");
+    	d.classList.toggle("opened");
+	};
+
+</script>

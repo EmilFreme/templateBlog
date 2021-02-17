@@ -11,3 +11,9 @@ Bem vindo ao curso de Jogos Digitais 2021/1
 
 {:.aviso}
 Um aviso aqui
+
+1. lorem
+1. ipsum
+1. dolor
+1. sit
+1. amet
