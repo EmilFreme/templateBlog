@@ -25,7 +25,7 @@ layout: default
 			</div>
 			<div class="article-card__text">
 				<p>
-					{{ post.excerpt }}
+					{{ post.excerpt | truncate:80 }}
 				</p>
 			</div>
 		</a>
