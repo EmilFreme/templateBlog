@@ -35,6 +35,13 @@ a{
 	text-decoration:none;
 	}
 
+iframe {
+	display: block;       /* iframes are inline by default */
+	border: none;         /* Reset default border */
+	height: 76vh !important;        /* Viewport-relative units */
+	width: 100vw !important;
+}
+
 header{
     position: fixed;
     display: flex;
