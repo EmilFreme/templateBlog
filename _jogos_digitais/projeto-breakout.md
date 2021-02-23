@@ -13,9 +13,10 @@ type: projeto 2021.1
 
 [Documento da Missão](https://docs.google.com/document/d/e/2PACX-1vT9RY9MxAx_Iu_hdiGdd5xm53OfGOdAbopDQ-uLS7b67eNqSi0Gseh7PCkUIJ73quN3HiVryEfXyKcJ/pub?embedded=true)
 
-<!-- 
-[Link da Jam no Itch.io]()
 
-[Link para a Entrega]()
- -->
+ 
+[Link da Jam no Itch.io *TURMA A*](https://itch.io/jam/20211-breakout-a)
+[Link da Jam no Itch.io *TURMA B*](https://itch.io/jam/20211-breakout-b)
+
+[Link para a Entrega](https://forms.gle/UTR2SPDkxqnutTku8)
 
