@@ -5,6 +5,12 @@ layout: default
 <div class="aulaWrapper" style="margin-top:50px">
 <div class="row">
 	<ul class="col-2 indice-aula">
+
+		<li class="indice_type top_nav">
+			<a href="{{site.baseurl}}jogos_digitais.html">
+	        Início
+	    	</a>
+    	</li>
 	{% assign without_types = site.jogos_digitais
 		| where: "type", empty		%}
 		{% for post in without_types %}

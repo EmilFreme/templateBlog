@@ -2,7 +2,7 @@
 layout: aula
 title: "Breakout Parte 2"
 aula: 02
-type: handout
+type: tutorial
 ---
 Para comentários: [Breakout 02](https://docs.google.com/document/d/16Vbn71vnrC7GMuHTwrbbtnQNBScOUgJ_KNFdO_AAGm8/edit?usp=sharing)
 

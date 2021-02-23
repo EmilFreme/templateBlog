@@ -60,7 +60,19 @@ header{
 
 }
 
+table{
+	margin:1em;
+}
+th{
+	font-weight: $bolder-face;
+	padding:1em;
+	border: solid 1px $preto;
+}
 
+td{
+	padding: 1em;
+	border: solid 1px $preto;
+}
 
 footer{
     width:100%;
@@ -270,22 +282,26 @@ footer{
 			font-size:1.6em;
 			font-weight:$bold-face;
 			padding-bottom:5px;
+			margin-bottom: 0.75em;
 		}
 		h3{
 			font-size:1.6em;
 			font-weight:$thin-face;
 			padding-bottom:5px;
-			border-top:1px dashed $vinho
+			border-top:1px dashed $vinho;
+			margin-bottom: 0.75em;
 		}
 		h4{
 			font-size:1.2em;
 			font-weight:$bolder-face;
 			padding-bottom:5px;
+			margin-bottom: 0.375em;
 		}
 		h5{
 			font-size:1.2em;
 			font-weight:$bold-face;
 			padding-bottom:5px;
+			margin-bottom: 0.375em;
 		}
 		h6{
 			font-size:1.2em;
