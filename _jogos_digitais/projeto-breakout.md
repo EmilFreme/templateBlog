@@ -16,6 +16,7 @@ type: projeto 2021.1
 
  
 [Link da Jam no Itch.io *TURMA A*](https://itch.io/jam/20211-breakout-a)
+
 [Link da Jam no Itch.io *TURMA B*](https://itch.io/jam/20211-breakout-b)
 
 [Link para a Entrega](https://forms.gle/UTR2SPDkxqnutTku8)
