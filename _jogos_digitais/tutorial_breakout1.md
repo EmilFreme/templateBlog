@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-title: "Breakout Parte 1"
+title: "Breakout (parte 1)"
 aula: 01
 type: tutorial
 ---
