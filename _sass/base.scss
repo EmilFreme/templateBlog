@@ -33,7 +33,13 @@ ol{
 
 a{
 	text-decoration:none;
-	}
+	color: $preto;
+	transition:1s;
+}
+
+a:hover{
+	color:$vermelho;
+}
 
 iframe {
 	display: block;       /* iframes are inline by default */
