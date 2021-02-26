@@ -1,7 +1,7 @@
 ---
 layout: aula
 title: "Breakout"
-type: projeto 2021.1
+type: missões 2021.1
 ---
 
 **Tutoriais**  
@@ -9,7 +9,8 @@ type: projeto 2021.1
     - [Tutorial parte 2]({% link _jogos_digitais/tutorial_breakout2.md %})
 
 **Vídeos**  
-    - [Vídeo parte 1]({% link _jogos_digitais/videos_breakout1.md %})
+    - [Vídeo parte 1]({% link _jogos_digitais/videos_breakout1.md %})  
+    - [Vídeo parte 2]({% link _jogos_digitais/videos_breakout2.md %})
 
 [Documento da Missão](https://docs.google.com/document/d/e/2PACX-1vT9RY9MxAx_Iu_hdiGdd5xm53OfGOdAbopDQ-uLS7b67eNqSi0Gseh7PCkUIJ73quN3HiVryEfXyKcJ/pub?embedded=true)
 
