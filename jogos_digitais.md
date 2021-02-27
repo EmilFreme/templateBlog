@@ -1,9 +1,9 @@
 ---
-title: Jogos Digitais.
+title: Disciplina - Jogos Digitais
 layout: aula
 ---
 
-# Bem vindo ao curso de Jogos Digitais 2021/1
+# Bem vindo a disciplina de Jogos Digitais 2021/1
 
 - **Curso:** Engenharia da Computação - Sétimo Semestre - [Insper](https://www.insper.edu.br/)
 - **Disciplina:** Jogos Digitais
@@ -22,18 +22,25 @@ Existem duas turmas concorrentes, **fique atento para fazer suas entregas na tur
 <table>
 	<thead>
 		<tr>
+		<th></th>
 		<th> Turma A </th>
 		<th> Turma B </th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
+			<th rowspan="2">Aulas</th>
 			<td><b>Terça:</b> 09:45h</td>
 			<td><b>Quarta:</b> 13:30h</td>
 		</tr>
 		<tr>
 			<td><b>Sexta:</b> 13:30</td>
 			<td><b>Sexta:</b> 07:30h</td>
+		</tr>
+		<tr>
+			<th>Atendimento</th>
+			<td><b>Sexta:</b> 15:30</td>
+			<td><b>Sexta:</b> 09:30h</td>
 		</tr>
 	</tbody>
 </table>

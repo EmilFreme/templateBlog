@@ -1,6 +1,6 @@
 ---
-layout: tutorial
-title: "Apresentação do Curso e Introdução a Unity3D"
+layout: curso
+title: "Apresentação da Disciplina e Introdução a Unity3D"
 aula: 01
 type: aula
 ---

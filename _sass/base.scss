@@ -2,6 +2,9 @@
 $preto:     #000000;
 $branco:    #ffffff;
 $vermelho:  #c00026;
+$azul:      #0000ff;
+$verde:     #00ff00;
+$ciano:     #00ffff;
 
 //Cores Secundárias
 $vinho:     #a62b4d;
@@ -28,24 +31,29 @@ ol{
 	list-style-type: decimal;
 	li{
 		margin:0.2em;
-}
+	}
 }
 
 a{
 	text-decoration:none;
-	color: $preto;
+	color: $vinho;
 	transition:1s;
 }
 
+header a:hover{
+	color:$ciano;
+}
+
 a:hover{
-	color:$vermelho;
+	color:$vinho;
+	text-shadow: 0 0 1px #FF0000, 0 0 2px #0000FF;
 }
 
 iframe {
-	display: block;       /* iframes are inline by default */
-	border: none;         /* Reset default border */
-	height: 76vh !important;        /* Viewport-relative units */
-	width: 100% !important;
+	display: block;           /* iframes are inline by default */
+	border: none;             /* Reset default border */
+	height: 84vh !important;  /* Viewport-relative units */
+	width: 100% !important;	  /* Viewport-relative units */
 	
 }
 
@@ -77,10 +85,12 @@ header{
 table{
 	margin:1em;
 }
+
 th{
 	font-weight: $bolder-face;
 	padding:1em;
 	border: solid 1px $preto;
+	vertical-align: middle;
 }
 
 td{
@@ -91,13 +101,11 @@ td{
 footer{
     width:100%;
     background-color:$cinza;
-    padding:20px;
+    padding:8px;
 	color:$branco;
 	text-align:center;
 	a{color:$branco;}
-    }
-
-
+}
 
 .centered{text-align:center;}
 //div{border: 1px solid red; margin: -1px;}
@@ -108,6 +116,10 @@ footer{
 
 .pull-right{
     margin-left: auto;
+}
+
+.aulaWrapper{
+	margin-top: 40px
 }
 
 .mainWrapper{
@@ -156,10 +168,17 @@ footer{
 	flex-wrap:wrap;
 }
 
+.principal{
+	display:flex;
+	flex-wrap:wrap;
+	min-height: 91vh;
+}
+
 .article-card{
 	padding:10px;
 	cursor:pointer;
 }
+
 .article-card__text{
 	height:150px;
 	padding:2pt;
@@ -265,6 +284,7 @@ footer{
 
 .aula_content {
 	padding-left:2em !important;
+	padding-bottom:0px !important;
 	.post_header{
 		background: none;
 		margin-top:50px;

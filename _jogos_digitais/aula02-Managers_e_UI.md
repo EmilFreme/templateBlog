@@ -1,5 +1,5 @@
 ---
-layout: tutorial
+layout: aula
 title: "Managers e UI"
 aula: 02
 type: aula
