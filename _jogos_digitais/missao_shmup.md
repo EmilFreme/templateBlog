@@ -15,9 +15,9 @@ type: missões 2021.1
 
 
  
-[Link da Jam no Itch.io *TURMA A*]()
+[Link da Jam no Itch.io *TURMA A*](https://itch.io/jam/20211-shmup-a)
 
-[Link da Jam no Itch.io *TURMA B*]()
+[Link da Jam no Itch.io *TURMA B*](https://itch.io/jam/20211-shmup-b)
 
 [Link para a Entrega]()
 
