@@ -7,6 +7,7 @@ type: missões 2021.1
 **Tutoriais**  
     - [Tutorial parte 1]({% link _jogos_digitais/tutorial_shmup1.md %})  
     - [Tutorial parte 2]({% link _jogos_digitais/tutorial_shmup2.md %})  
+    - [Tutorial parte 3]({% link _jogos_digitais/tutorial_shmup3.md %})  
 
 **Vídeos**  
     - [Vídeo parte 1]({% link _jogos_digitais/videos_shmup1.md %})  
