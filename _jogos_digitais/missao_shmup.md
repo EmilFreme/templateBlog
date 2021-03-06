@@ -11,6 +11,7 @@ type: missões 2021.1
 
 **Vídeos**  
     - [Vídeo parte 1]({% link _jogos_digitais/videos_shmup1.md %})  
+    - [Vídeo parte 2]({% link _jogos_digitais/videos_shmup2.md %})  
     
 [Documento da Missão](https://docs.google.com/document/d/e/2PACX-1vT6crpqJiNQYst4gMWDqa61QRVmloAEwM9uOTVRx8bNER1IOIbc6BUAkLT_lDjUp8kebuGKH01szMo5/pub?embedded=true)
 
