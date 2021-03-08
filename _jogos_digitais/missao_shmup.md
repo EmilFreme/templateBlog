@@ -21,5 +21,5 @@ type: missões 2021.1
 
 [Link da Jam no Itch.io *TURMA B*](https://itch.io/jam/20211-shmup-b)
 
-[Link para a Entrega]()
+[Link para a Entrega](https://forms.gle/CtKmcvCpZGXp7x4UA)
 
