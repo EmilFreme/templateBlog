@@ -37,6 +37,9 @@ collections:
   jogos_digitais:
     sort_by: aula
     output: true
+  unity:
+    sort_by: aula
+    output: true
 
 
 # Exclude from processing.
