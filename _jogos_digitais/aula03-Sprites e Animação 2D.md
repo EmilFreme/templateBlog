@@ -1,7 +1,7 @@
 ---
 layout: aula
 title: "Sprites e Animação 2D"
-aula: 03
+aula: 3
 type: aula
 ---
 

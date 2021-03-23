@@ -1,7 +1,7 @@
 ---
 layout: aula
 title: "QA & Testes"
-aula: 06
+aula: 6
 type: aula
 ---
 
