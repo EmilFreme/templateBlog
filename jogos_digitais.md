@@ -52,6 +52,13 @@ Todas as entregas deste semestre deverão conter **Um projeto no Itch.io registr
 {:.alerta}
 Projetos que não atenderem esses crítérios serão considerados não entreges
 
+Pesos das notas (atualizado): 
+- Breakout 10%
+- Shmups 10%
+- Microgame 10%
+- Boss2D 20%
+- FP Explorer 20%
+- Boss Final 30%
 
 [Link do Teams](https://teams.microsoft.com/l/team/19%3af1be3a004d324410a1935d05dcd15b98%40thread.tacv2/conversations?groupId=6aa3fc2b-1dcb-4d28-9dd0-018eedc52624&tenantId=6370a6c0-7b90-4709-bd6e-59c28ede833b)
 
