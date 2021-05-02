@@ -1,7 +1,7 @@
 ---
 layout: aula
-title: "Graybox, Terrenos e Composição"
-aula: 14
+title: "Graybox, Terreno e Composição"
+aula: 13
 type: aula
 ---
 

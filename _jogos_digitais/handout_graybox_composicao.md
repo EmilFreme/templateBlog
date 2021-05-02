@@ -1,6 +1,6 @@
 ---
 layout: outro
-title: "Greybox e Composição"
+title: "Graybox e Composição"
 type: handout
 ---
 
