@@ -13,4 +13,4 @@ type: missões 2021.1
 
 [Link da Jam no Itch.io *TURMA B*](https://itch.io/jam/fp-puzzle-20211-b)
 
-[Link para a Entrega]()
+[Link para a Entrega](https://forms.gle/cGf6AY2BQq8yvt2z7)
