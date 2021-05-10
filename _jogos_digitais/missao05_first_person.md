@@ -9,8 +9,8 @@ type: missões 2021.1
 
 [Documento da Missão](https://docs.google.com/document/d/e/2PACX-1vS32T-Xiff-0ni5zi7ePuSK8CStVw_L1INgO7HpHt8zg17Pf-BuU_KQqf79QEWWOKYUco7XdlZee34G/pub?embedded=true)
  
-[Link da Jam no Itch.io *TURMA A*]()
+[Link da Jam no Itch.io *TURMA A*](https://itch.io/jam/fp-puzzle-20211-a)
 
-[Link da Jam no Itch.io *TURMA B*]()
+[Link da Jam no Itch.io *TURMA B*](https://itch.io/jam/fp-puzzle-20211-b)
 
 [Link para a Entrega]()
