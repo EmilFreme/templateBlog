@@ -586,3 +586,17 @@ footer{
 }
 
 .citacao{text-align: center;}
+
+
+.acordeon.open h1:first-of-type::after{
+    content: ">";
+    float:right;
+}
+
+
+
+.pagination{
+  text-align: center;
+  padding:1em;
+  font-size: 1.5em;
+}
