@@ -9,4 +9,4 @@ type: missões 2021.1
  
 [Link da Jam no Itch.io](https://itch.io/jam/final-boss-20211)
 
-[Link para a Entrega]()
+[Link para a Entrega](https://forms.gle/XamaLq1JiJaKpWX76)

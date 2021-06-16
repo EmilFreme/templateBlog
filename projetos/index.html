@@ -36,19 +36,20 @@ layout: default
 <div class="row">
 <div class="pagination col-10">
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" class="previous">
+  
+    <a href= "{{ paginator.previous_page_path | append: 'index.html' | replace: '//', '/'}}" class="previous">
       Anterior
     </a>
   {% else %}
-    <span class="previous">Anterior</span>
+    <!--<span class="previous">Anterior</span>-->
   {% endif %}
   <span class="page_number ">
    <b>{{ paginator.page }}</b> de {{ paginator.total_pages }}
   </span>
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="next">Próxima</a>
+    <a href="{{ paginator.next_page_path }}/index.html" class="next">Próxima</a>
   {% else %}
-    <span class="next ">Próxima</span>
+    <!--<span class="next ">Próxima</span>-->
   {% endif %}
 </div>
 </div>
