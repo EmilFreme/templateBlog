@@ -21,7 +21,7 @@ layout: default
 	
 	<div class="mainWrapper">
 		<div class="row first-row">
-			{% if page.next %}	
+			{% if page.next %}
 			<a href="{{ page.next.url }}" class="article-card col-3">
 				<div class="article-card__title">
 					<div class="title--text">
@@ -35,12 +35,12 @@ layout: default
 				</div>
 				<div class="article-card__text">
 					<p>
-						{{ page.next.excerpt }}
+						{{ page.next.excerpt | truncate: 80}}
 					</p>
 				</div>
 			</a>
 			{% endif %}
-			{% if page.previous %}	
+			{% if page.previous %}
 			<a href="{{ page.previous.url }}" class="article-card col-3">
 				<div class="article-card__title">
 					<div class="title--text">
@@ -54,7 +54,7 @@ layout: default
 				</div>
 				<div class="article-card__text">
 					<p>
-						{{ page.previous.excerpt }}
+						{{ page.previous.excerpt | truncate: 80}}
 					</p>
 				</div>
 			</a>

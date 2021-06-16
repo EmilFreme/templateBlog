@@ -32,11 +32,18 @@ excerpt_separator: <!--more-->
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-paginate
 
 collections:
   jogos_digitais:
     sort_by: aula
     output: true
+  unity:
+    sort_by: aula
+    output: true
+    
+paginate: 6
+paginate_path: "/projetos/page:num"
 
 
 # Exclude from processing.

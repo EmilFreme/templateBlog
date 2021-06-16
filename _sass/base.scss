@@ -2,6 +2,9 @@
 $preto:     #000000;
 $branco:    #ffffff;
 $vermelho:  #c00026;
+$azul:      #0000ff;
+$verde:     #00ff00;
+$ciano:     #00ffff;
 
 //Cores Secundárias
 $vinho:     #a62b4d;
@@ -28,12 +31,31 @@ ol{
 	list-style-type: decimal;
 	li{
 		margin:0.2em;
-}
+	}
 }
 
 a{
 	text-decoration:none;
-	}
+	color: $vinho;
+	transition:1s;
+}
+
+header a:hover{
+	color:$ciano;
+}
+
+a:hover{
+	color:$vinho;
+	text-shadow: 0 0 1px #FF0000, 0 0 2px #0000FF;
+}
+
+iframe {
+	display: block;           /* iframes are inline by default */
+	border: none;             /* Reset default border */
+	height: 84vh !important;  /* Viewport-relative units */
+	width: 100% !important;	  /* Viewport-relative units */
+	
+}
 
 header{
     position: fixed;
@@ -60,18 +82,30 @@ header{
 
 }
 
+table{
+	margin:1em;
+}
 
+th{
+	font-weight: $bolder-face;
+	padding:1em;
+	border: solid 1px $preto;
+	vertical-align: middle;
+}
+
+td{
+	padding: 1em;
+	border: solid 1px $preto;
+}
 
 footer{
     width:100%;
     background-color:$cinza;
-    padding:20px;
+    padding:8px;
 	color:$branco;
 	text-align:center;
 	a{color:$branco;}
-    }
-
-
+}
 
 .centered{text-align:center;}
 //div{border: 1px solid red; margin: -1px;}
@@ -82,6 +116,10 @@ footer{
 
 .pull-right{
     margin-left: auto;
+}
+
+.aulaWrapper{
+	margin-top: 40px
 }
 
 .mainWrapper{
@@ -130,10 +168,17 @@ footer{
 	flex-wrap:wrap;
 }
 
+.principal{
+	display:flex;
+	flex-wrap:wrap;
+	min-height: 91vh;
+}
+
 .article-card{
 	padding:10px;
 	cursor:pointer;
 }
+
 .article-card__text{
 	height:150px;
 	padding:2pt;
@@ -239,6 +284,7 @@ footer{
 
 .aula_content {
 	padding-left:2em !important;
+	padding-bottom:0px !important;
 	.post_header{
 		background: none;
 		margin-top:50px;
@@ -270,22 +316,26 @@ footer{
 			font-size:1.6em;
 			font-weight:$bold-face;
 			padding-bottom:5px;
+			margin-bottom: 0.75em;
 		}
 		h3{
 			font-size:1.6em;
 			font-weight:$thin-face;
 			padding-bottom:5px;
-			border-top:1px dashed $vinho
+			border-top:1px dashed $vinho;
+			margin-bottom: 0.75em;
 		}
 		h4{
 			font-size:1.2em;
 			font-weight:$bolder-face;
 			padding-bottom:5px;
+			margin-bottom: 0.375em;
 		}
 		h5{
 			font-size:1.2em;
 			font-weight:$bold-face;
 			padding-bottom:5px;
+			margin-bottom: 0.375em;
 		}
 		h6{
 			font-size:1.2em;
@@ -536,3 +586,17 @@ footer{
 }
 
 .citacao{text-align: center;}
+
+
+.acordeon.open h1:first-of-type::after{
+    content: ">";
+    float:right;
+}
+
+
+
+.pagination{
+  text-align: center;
+  padding:1em;
+  font-size: 1.5em;
+}
