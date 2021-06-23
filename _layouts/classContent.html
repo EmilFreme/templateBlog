@@ -1,0 +1,158 @@
+---
+layout: default
+---
+
+<nav id="courseNav" class="closed">
+    <div class="wrapper">
+    <div id="courseNav__toggle" class="closed">
+        <span class="mdi mdi-chevron-right-circle-outline closed"></span>
+    </div>
+    <h1 class="courseNav__name">
+        Realidade Virtual
+    </h1>
+    <ul class="courseNav__links">
+        <li> <span class="mdi mdi-home"></span> <a href="#"> Index </a></li>
+        <li class="mission">
+            <span class="mdi mdi-rocket-launch"></span>
+            <a href="#">Missão</a>
+            <div class="naosei">
+                <ul>
+                    <li> askjdakjshd </li>
+                    <li> askjdakjshd </li>
+                    <li> askjdakjshd </li>
+
+                </ul>
+
+                        
+            </div>
+        </li>
+    </ul>
+    </div>
+</nav>
+
+
+<style type="text/css">
+
+#courseNav{
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:85%;
+    height:100%;
+    color: #FFFFFF;
+    background-color: #686868;
+    overflow:hidden;
+    transition: width 1.5s;
+    padding:16px;
+}
+
+#courseNav .wrapper{
+    width:75vw;
+}
+
+#courseNav.closed{
+    width:0px;
+    padding:0px;
+}
+
+#couseNav.open{
+    width:85%;
+}
+
+.courseNav__name{
+    font-size:26px;
+    height:64px;
+    padding:5px;
+    border-bottom:5px solid #ffffff;
+    display:flex;
+    align-items: flex-end;
+    filter: drop-shadow(4px 4px 4px #000000);
+}
+
+.courseNav__links{
+    font-size:16px;
+    margin-top:32px;
+}
+
+.courseNav__links li{
+    margin:16px;
+}
+
+.courseNav__links  span {
+    margin-right:8px;
+}
+
+.courseNav__links .mission{
+    font-size:20px;
+}
+
+.naosei{
+    font-size:16px;
+    box-sizing:border-box;
+    background-color: #808080;
+    border: 1px solid #808080;
+    border-radius:5px;
+
+    filter: drop-shadow(4px 4px 4px #000000);
+}
+
+#courseNav__toggle {
+    position:fixed;
+    top:55px;
+    left:0;
+    width:40px;
+    height:40px;
+    background-color: #686868;
+    border: 1px solid #686868;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    color: #FFFFFF;
+    font-weight:900;
+    transition: transform 1.5s;
+}
+
+#courseNav__toggle.closed{
+    transform: translateX(0px);
+}
+
+#courseNav__toggle.open{
+    transform: translateX(84vw);
+}
+
+#courseNav__toggle > span{
+    transition: transform 1.5s;
+}
+
+span.closed{
+    transform: rotate(0deg);
+}
+
+span.open{
+    transform: rotate(180deg);
+}
+    
+
+</style>
+
+<script type="text/javascript">
+"use strict";
+var toggleButton = document.getElementById("courseNav__toggle");
+toggleButton.addEventListener("click", toggleNav);
+
+
+
+function toggleNav(event){
+    var toggleButton = document.querySelector("#courseNav__toggle > span");
+    toggleButton.classList.toggle("closed");
+    toggleButton.classList.toggle("open");
+    var courseNav = document.getElementById("courseNav");
+    courseNav.classList.toggle("closed");
+    courseNav.classList.toggle("open");
+    var courseNav_toggle = document.getElementById("courseNav__toggle");
+    courseNav_toggle.classList.toggle("closed");
+    courseNav_toggle.classList.toggle("open");
+}
+ 
+</script>
