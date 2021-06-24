@@ -35,7 +35,7 @@ plugins:
   - jekyll-paginate
 
 collections:
-  jogos_digitais:
+  courses:
     sort_by: aula
     output: true
   unity:

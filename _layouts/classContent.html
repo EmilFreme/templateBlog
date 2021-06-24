@@ -6,20 +6,45 @@ layout: default
     <div class="wrapper">
     <div id="courseNav__toggle" class="closed">
         <span class="mdi mdi-chevron-right-circle-outline closed"></span>
+        <span class="mobileHide">Menu</span>
     </div>
     <h1 class="courseNav__name">
-        Realidade Virtual
+        {{page.course}}
     </h1>
     <ul class="courseNav__links">
         <li> <span class="mdi mdi-home"></span> <a href="#"> Index </a></li>
         <li class="mission">
             <span class="mdi mdi-rocket-launch"></span>
             <a href="#">Missão</a>
-            <div class="naosei">
+            <div class="mission__content">
                 <ul>
-                    <li> askjdakjshd </li>
-                    <li> askjdakjshd </li>
-                    <li> askjdakjshd </li>
+                    <li class="classToggle">
+                        <span class="mdi mdi-arrow-right-drop-circle closed"></span>1. Aulala 
+                        <ul class="classContent closed"> 
+                            <li>
+                                <span class="mdi mdi-presentation"></span>
+                                Slides
+                            </li>
+                            <li>
+                                <span class="mdi mdi-file"></span>
+                                Handout 
+                            </li>
+                            <li>
+                                <span class="mdi mdi-file-document-outline"></span>
+                                Tutorial
+                            </li>
+                            <li>
+                                <span class="mdi mdi-youtube"></span>
+                                Vídeo
+                            </li>
+                            <li>
+                                <span class="mdi mdi-map-marker-question-outline"></span>
+                                tarefas
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="classToggle"><span class="mdi mdi-arrow-right-drop-circle closed"></span>2. Aulelel </li>
+                    <li class="classToggle"><span class="mdi mdi-arrow-right-drop-circle closed"></span>3. Aulolo </li>
 
                 </ul>
 
@@ -42,8 +67,16 @@ layout: default
     color: #FFFFFF;
     background-color: #686868;
     overflow:hidden;
-    transition: width 1.5s;
+    transition: width 1.5s, padding 1.5s;
     padding:16px;
+}
+
+#courseNav ul{
+    line-height: 2em;
+}
+
+#courseNav a{
+    color: #ffffff;
 }
 
 #courseNav .wrapper{
@@ -59,49 +92,12 @@ layout: default
     width:85%;
 }
 
-.courseNav__name{
-    font-size:26px;
-    height:64px;
-    padding:5px;
-    border-bottom:5px solid #ffffff;
-    display:flex;
-    align-items: flex-end;
-    filter: drop-shadow(4px 4px 4px #000000);
-}
-
-.courseNav__links{
-    font-size:16px;
-    margin-top:32px;
-}
-
-.courseNav__links li{
-    margin:16px;
-}
-
-.courseNav__links  span {
-    margin-right:8px;
-}
-
-.courseNav__links .mission{
-    font-size:20px;
-}
-
-.naosei{
-    font-size:16px;
-    box-sizing:border-box;
-    background-color: #808080;
-    border: 1px solid #808080;
-    border-radius:5px;
-
-    filter: drop-shadow(4px 4px 4px #000000);
-}
-
 #courseNav__toggle {
     position:fixed;
     top:55px;
     left:0;
     width:40px;
-    height:40px;
+    min-height:40px;
     background-color: #686868;
     border: 1px solid #686868;
     border-radius: 0 20px 20px 0;
@@ -111,6 +107,9 @@ layout: default
     color: #FFFFFF;
     font-weight:900;
     transition: transform 1.5s;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    padding: 5px;
 }
 
 #courseNav__toggle.closed{
@@ -125,14 +124,95 @@ layout: default
     transition: transform 1.5s;
 }
 
-span.closed{
+#courseNav__toggle > span.closed{
     transform: rotate(0deg);
 }
 
-span.open{
+#courseNav__toggle > span.open{
     transform: rotate(180deg);
 }
-    
+
+.courseNav__name{
+    font-size:26px;
+    height:64px;
+    padding:5px;
+    border-bottom:5px solid #ffffff;
+    display:flex;
+    align-items: flex-end;
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.4));
+}
+
+.courseNav__links{
+    font-size:16px;
+    margin-top:32px;
+}
+
+.courseNav__links li{
+/*    margin:16px;*/
+}
+
+.courseNav__links  span {
+    margin-right:8px;
+}
+
+.courseNav__links .mission{
+    font-size:20px;
+}
+
+.mission__content{
+    font-size:16px;
+    box-sizing:border-box;
+    background-color: #808080;
+    border: 1px solid #808080;
+    border-radius:5px;
+    padding-left:1em;
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.4));
+}
+
+.classToggle > span{
+    font-size:20px;
+    display:inline-block;
+    transition: transform 1s;
+}
+
+
+.classToggle > span.closed{
+    transform: rotate(0deg);
+}
+
+
+.classToggle > span.open{
+    transform: rotate(90deg);
+}
+
+.classContent{
+    margin-left:8px;
+    border-left: 2px solid white;
+    margin-top: -0.6em;
+    padding: 1em 0 0 1em;
+    overflow: hidden;
+    transition: transform 1s, padding 1s, max-height 1s;
+    max-height:300px;
+    transform-origin: top left;
+}
+
+.classContent.closed{
+    transform: scaleY(0);
+    max-height: 0;
+    padding:0;
+}
+
+.classContent.open{
+    transform: scaleY(1);
+    max-height: 300px;
+    padding:1em 0 0 1em;
+}
+
+@media only screen and (max-width:600px){
+.mobileHide{
+    display:none;
+}
+}
 
 </style>
 
@@ -141,6 +221,10 @@ span.open{
 var toggleButton = document.getElementById("courseNav__toggle");
 toggleButton.addEventListener("click", toggleNav);
 
+var toggleClassList = document.getElementsByClassName("classToggle");
+for(var i = 0; i < toggleClassList.length; i++){
+    toggleClassList[i].addEventListener("click", toggleClass);
+}
 
 
 function toggleNav(event){
@@ -153,6 +237,22 @@ function toggleNav(event){
     var courseNav_toggle = document.getElementById("courseNav__toggle");
     courseNav_toggle.classList.toggle("closed");
     courseNav_toggle.classList.toggle("open");
+}
+
+
+function toggleClass(event){
+
+    var target = event.target;
+    
+    if(target.tagName != "SPAN"){ // Clicked outside the icon
+        target = target.querySelector("span");
+    }
+    target.classList.toggle("closed");
+    target.classList.toggle("open");
+    var classContent = target.parentElement.querySelector(".classContent");
+    classContent.classList.toggle("closed");
+    classContent.classList.toggle("open");
+    
 }
  
 </script>
