@@ -11,46 +11,70 @@ layout: default
     <h1 class="courseNav__name">
         {{page.course}}
     </h1>
+    <ol>
     <ul class="courseNav__links">
         <li> <span class="mdi mdi-home"></span> <a href="#"> Index </a></li>
+{% assign courseContents = site.courses | where: "course", page.course %}
+
+{% assign itemsBySections =  courseContents 
+    | sort: "sectionNo" 
+    | group_by:"section" 
+%}
+
+{% for sectionItems in itemsBySections %}
+        
         <li class="mission">
             <span class="mdi mdi-rocket-launch"></span>
-            <a href="#">Missão</a>
+            <a href="#">{{sectionItems.name}}</a>
+
+            {% assign lectures = sectionItems.items | group_by: "lecture" %}
+
             <div class="mission__content">
                 <ul>
+                    {% for lecture in lectures %}
                     <li class="classToggle">
-                        <span class="mdi mdi-arrow-right-drop-circle closed"></span>1. Aulala 
-                        <ul class="classContent closed"> 
+                        <span class="mdi mdi-arrow-right-drop-circle closed"></span>
+                        {{ lecture.name }} 
+                        <ul class="classContent closed">
+                            {% for content in lecture.items %}
+                            {% if content.type == "Slides" %}
                             <li>
                                 <span class="mdi mdi-presentation"></span>
-                                Slides
+                                <a href="{{content.url}}">{{ content.title }}</a>
                             </li>
+                            {% elsif content.type == "Handout" %}
                             <li>
                                 <span class="mdi mdi-file"></span>
-                                Handout 
+                                <a href="{{content.url}}">{{ content.title}}</a>
                             </li>
+                            {% elsif content.type == "Tutorial" %}
                             <li>
                                 <span class="mdi mdi-file-document-outline"></span>
-                                Tutorial
+                                <a href="{{content.url}}">{{ content.title}}</a>
                             </li>
+                            {% elsif content.type == "Video" %}
                             <li>
                                 <span class="mdi mdi-youtube"></span>
-                                Vídeo
+                                
+                                <a href="{{content.url}}">{{ content.title}}</a>
                             </li>
+                            {% elsif content.type == "Tarefas" %}
                             <li>
                                 <span class="mdi mdi-map-marker-question-outline"></span>
-                                tarefas
+                                <a href="{{content.url}}">{{ content.title}}</a>
                             </li>
+                            {% endif %}
+                            {% endfor %}
                         </ul>
                     </li>
-                    <li class="classToggle"><span class="mdi mdi-arrow-right-drop-circle closed"></span>2. Aulelel </li>
-                    <li class="classToggle"><span class="mdi mdi-arrow-right-drop-circle closed"></span>3. Aulolo </li>
+                    {% endfor %}
 
                 </ul>
 
                         
             </div>
         </li>
+{% endfor %}
     </ul>
     </div>
 </nav>
