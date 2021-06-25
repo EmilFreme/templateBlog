@@ -3,13 +3,13 @@ layout: default
 ---
 
 <nav id="courseNav" class="closed">
-    <div class="wrapper">
     <div id="courseNav__toggle" class="closed">
         <span class="mdi mdi-chevron-right-circle-outline closed"></span>
         <span class="mobileHide">Menu</span>
     </div>
+    <div class="wrapper">
     <h1 class="courseNav__name">
-        {{page.course}}
+        {{ page.course }}
     </h1>
     <ol>
     <ul class="courseNav__links">
@@ -68,10 +68,7 @@ layout: default
                         </ul>
                     </li>
                     {% endfor %}
-
                 </ul>
-
-                        
             </div>
         </li>
 {% endfor %}
@@ -79,8 +76,13 @@ layout: default
     </div>
 </nav>
 
+<div class="lectureContent">
+    {{ content }}
+</div>
+
 
 <style type="text/css">
+header{position:relative;}
 
 #courseNav{
     position:fixed;
@@ -130,10 +132,11 @@ layout: default
     justify-content:center;
     color: #FFFFFF;
     font-weight:900;
-    transition: transform 1.5s;
+    transition: transform 1.5s, opacity 1.5s;
     writing-mode: vertical-rl;
     text-orientation: upright;
     padding: 5px;
+    opacity: 0.5;
 }
 
 #courseNav__toggle.closed{
@@ -142,6 +145,7 @@ layout: default
 
 #courseNav__toggle.open{
     transform: translateX(84vw);
+    opacity: 1;
 }
 
 #courseNav__toggle > span{
@@ -236,6 +240,11 @@ layout: default
 .mobileHide{
     display:none;
 }
+}
+
+.lectureContent{
+    margin-top:40px;
+    padding:1em;
 }
 
 </style>

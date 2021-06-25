@@ -1,22 +1,5 @@
-// Cores
-$preto:     #000000;
-$branco:    #ffffff;
-$vermelho:  #c00026;
-$azul:      #0000ff;
-$verde:     #00ff00;
-$ciano:     #00ffff;
-
-//Cores Secundárias
-$vinho:     #a62b4d;
-$aqua:      #009491;
-$cinza:		#414042;
-$amarelo:   #A69542;
-
-$base-font: "Source Sans Pro", sans-serif;
-$thin-face:     300;
-$regular-face:  400;
-$bold-face:     600;
-$bolder-face:   900;
+@import "colors";
+@import "textformat";
 
 html{background:$cinza;}
 
