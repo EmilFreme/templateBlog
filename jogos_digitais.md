@@ -1,5 +1,7 @@
 ---
 title: Disciplina - Jogos Digitais
+course: Realidade Virtual
+#layout: classContent
 layout: aula
 ---
 

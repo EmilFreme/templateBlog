@@ -8,40 +8,6 @@ type: Tutorial
 title: "Wololo"
 ---
 
-# h1
+<iframe src="https://docs.google.com/document/d/e/2PACX-1vQ3lEHOr__lfoMt2kRlIbkU7NS40mSlumyMRKmY3OmhE4ZWcjInG61bYZkWDLE1aHxPS1oSqCu44mQL/pub?embedded=true"></iframe>
 
-## h2
-
-### h3
-
-#### h4
-
-##### h5
-
-###### h6
-
-- lista
-- nao
-- numeradak
-
-1. lista
-1. numerada
-
-{:data-filename="teste.cs"}
-```csharp
-void Update(){
-    Debug.log("Teste");
-}
-```
-
-{:.dica}
-Lorem ipsum dolor sit amet
-
-{:.aviso}
-Lorem ipsum dolor sit amet
-
-{:.alerta}
-Lorem ipsum dolor sit amet
-
-{:.citacao data-name="Alan Turing"}
-Lorem ipsum dolor sit amet
+<span style="float:right">Para comentários: [documento](https://docs.google.com/document/d/1mVJd7dUblghCx7bWHx_VI9MLV6KiZnFIbM7reClv49E/edit?usp=sharing)</span>
