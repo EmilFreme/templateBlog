@@ -14,13 +14,17 @@ var Raycaster;
 var Materials = new Map();
 
 var mouseTimeout;
-var mouseSensitivity = 10;
+var mouseSensitivity = 1;
 var joystick = { w: false, a: false, s: false, d: false, mx: 0, my: 0};
 
 var lastTime = 0;
 
 var Billboards = [];
 var RaycasterTargets = [];
+var Textures = [];
+
+var CameraYaw = 0;
+var CameraPitch = 0;
 /**
  * Billboard ""Class""
  **/
@@ -35,6 +39,7 @@ function Billboard(){
 
     this.mesh = new T.Mesh(geometry, material);
     this.mesh.name = `Billboard: ${Billboards.length}`;
+    this.mesh.material.setValues({ map: Textures[0]});
     RaycasterTargets.push (this.mesh);
     this.LookCamera = function(){ this.mesh.lookAt(MainCamera.position); };
     Billboards.push(this);
@@ -50,7 +55,7 @@ function Line(radius, phi, theta){
     let _phi = phi || 0; 
     let _theta = theta || 0;
 
-    this.end = new T.Vector3().setFromSphericalCoords(radius, phi, theta);
+    this.end = new T.Vector3().setFromSphericalCoords(_radius, _phi, _theta);
     let geometry = new T.BufferGeometry().setFromPoints([start, this.end]);
     
     this.line = new T.Line(geometry, Materials.get("DefaultLineMaterial"));
@@ -62,15 +67,20 @@ function Line(radius, phi, theta){
  **/
 
 function LoadDefaultMaterials(){
-    let billboard = new T.MeshBasicMaterial( {color: 0xaa00ff, side: T.DoubleSide});
+    let billboard = new T.MeshBasicMaterial( {color: 0xffffff, side: T.DoubleSide});
     billboard.trasnparent = true;
     billboard.opacity = 0.50;
 
     Materials.set("DefaultBillboardMaterial", billboard);
 
-    let line = new T.LineBasicMaterial({ color: 0xffffff });
+    let line = new T.LineBasicMaterial({ color: 0x21d9ed });
 
     Materials.set("DefaultLineMaterial", line);
+
+    let newTexture = new T.TextureLoader().load("/assets/0101.png");
+
+
+    Textures.push(newTexture);
 }
 
 
@@ -81,9 +91,9 @@ function Init(){
     HEIGHT = canva.offsetHeight;
     SceneRoot = new T.Scene();
     MainCamera = new T.PerspectiveCamera(75, WIDTH/HEIGHT, 0.1, 1000);
-    MainCamera.position.z = 100;
     Render = new T.WebGLRenderer();
     Render.setSize(WIDTH, HEIGHT);
+    Render.setClearColor(new T.Color(0x333333), 1);
     Raycaster = new T.Raycaster();
     canva.appendChild(Render.domElement);
     // Travar o mouse dentro da aplicação
@@ -91,8 +101,31 @@ function Init(){
                                canva.mezRequestPointerLock ||
                                webkitRequestPointerLock;
     canva.addEventListener("click", () => canva.requestPointerLock());
+    let circlegeom = new T.CircleGeometry(200);
+
+    let floorMaterial = new T.MeshBasicMaterial({color: 0xffffff});
+    let roofMaterial = new T.MeshBasicMaterial({color: 0x000000});
+
+    let floor = new T.Mesh(circlegeom, floorMaterial);
+    floor.position.set(0, -200, 0);
+    floor.rotateX(-Math.PI/2);
+
+
+    let roof = new T.Mesh(circlegeom, roofMaterial);
+    roof.position.set(0, 200, 0);
+    roof.rotateX(Math.PI/2);
+
+    SceneRoot.add(floor);
+    SceneRoot.add(roof);
+    setTimeout(cameraDebug, 1000);
 }
 
+function cameraDebug(){
+    let dir = new T.Vector3();
+    MainCamera.getWorldDirection(dir)
+    console.log(MainCamera.rotation);
+    setTimeout(cameraDebug, 1000);
+}
 
 function YearSystems(){
     for(let i = 0; i < 1 + Math.random() * 3; i++){
@@ -115,7 +148,7 @@ function YearSystems(){
         }
         system.position.set(T.MathUtils.randFloatSpread(150),
                             T.MathUtils.randFloatSpread(150),
-                            T.MathUtils.randFloat(0, -10));
+                            T.MathUtils.randFloatSpread(150))
         SceneRoot.add(system);
     }
 
@@ -197,26 +230,44 @@ function UpdateBillboards(){
 }
 
 function HandleInput(dt){
-    if(joystick.w) MainCamera.position.z -= 10*dt;
-    if(joystick.s) MainCamera.position.z += 10*dt;
+
+    let dir = new T.Vector3();
+    MainCamera.getWorldDirection(dir)
+
+    if(joystick.w) MainCamera.position.add(dir.multiplyScalar(20*dt));
+    if(joystick.s) MainCamera.position.add(dir.multiplyScalar(-20*dt));
     if(joystick.a) MainCamera.position.x -= 10*dt;
     if(joystick.d) MainCamera.position.x += 10*dt;
+
     if(Math.abs(joystick.mx) > 0){
-        MainCamera.rotateY(-T.MathUtils.degToRad(joystick.mx * dt * mouseSensitivity));
+        CameraYaw -= joystick.mx * dt * mouseSensitivity;
     }
     if(Math.abs(joystick.my) > 0){
-        MainCamera.rotateX(-T.MathUtils.degToRad(joystick.my * dt * mouseSensitivity));
+        CameraPitch -= joystick.my * dt * mouseSensitivity;
+        CameraPitch = T.MathUtils.clamp(CameraPitch, -80 * Math.PI/180, 80 * Math.PI/180);
     }
+    let rotation = new T.Euler(CameraPitch, CameraYaw, 0);
+    MainCamera.setRotationFromEuler(rotation);
 }
 
 let center = new T.Vector2(0, 0);
+let ActiveObject = null;
 function HandleCrosshair(){
     Raycaster.setFromCamera(center, MainCamera);
     
 
     let intersections = Raycaster.intersectObjects(RaycasterTargets);
     if(intersections.length > 0){
-        console.log(intersections[0].object.name);
+        if(ActiveObject !== intersections[0].object){
+            if(ActiveObject !== null)
+                ActiveObject.scale.set(1, 1, 1);
+            ActiveObject = intersections[0].object;
+            ActiveObject.scale.set(5, 5, 5);
+        }
+    }else {
+        if(ActiveObject !== null)
+            ActiveObject.scale.set(1, 1, 1);
+        ActiveObject = null;
     }
     
 }
