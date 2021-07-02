@@ -10,8 +10,17 @@ var WIDTH, HEIGHT;
 var SceneRoot;
 var MainCamera;
 var Render;
+var Raycaster;
 var Materials = new Map();
 
+var mouseTimeout;
+var mouseSensitivity = 10;
+var joystick = { w: false, a: false, s: false, d: false, mx: 0, my: 0};
+
+var lastTime = 0;
+
+var Billboards = [];
+var RaycasterTargets = [];
 /**
  * Billboard ""Class""
  **/
@@ -25,8 +34,10 @@ function Billboard(){
     let material = Materials.get("DefaultBillboardMaterial");
 
     this.mesh = new T.Mesh(geometry, material);
-
+    this.mesh.name = `Billboard: ${Billboards.length}`;
+    RaycasterTargets.push (this.mesh);
     this.LookCamera = function(){ this.mesh.lookAt(MainCamera.position); };
+    Billboards.push(this);
 }
 
 /**
@@ -73,6 +84,7 @@ function Init(){
     MainCamera.position.z = 100;
     Render = new T.WebGLRenderer();
     Render.setSize(WIDTH, HEIGHT);
+    Raycaster = new T.Raycaster();
     canva.appendChild(Render.domElement);
     // Travar o mouse dentro da aplicação
     canva.requestPointerLock = canva.requestPointerLock ||
@@ -103,14 +115,13 @@ function YearSystems(){
         }
         system.position.set(T.MathUtils.randFloatSpread(150),
                             T.MathUtils.randFloatSpread(150),
-                            T.MathUtils.randFloat(0, -150));
+                            T.MathUtils.randFloat(0, -10));
         SceneRoot.add(system);
     }
 
 }
 
 ///////////////////////////////
-var joystick = { w: false, a: false, s: false, d: false, mx: 0, my: 0};
 
 window.addEventListener("keydown", function(event){
     const keyName = event.key;
@@ -152,14 +163,12 @@ window.addEventListener("keyup", function(event){
     }
 });
 
-var mouseTimeout;
-var mouseSensitivity = 10;
 
 function mouseHandler(event){
     joystick.mx = event.movementX;
     joystick.my = event.movementY;
     clearTimeout(mouseTimeout); 
-    mouseTimeout = setTimeout(function(){joystick.mx = 0; joystick.my = 0}, 250);
+    mouseTimeout = setTimeout(function(){joystick.mx = 0; joystick.my = 0}, 15);
     
 }
 
@@ -181,13 +190,13 @@ if (typeof __THREE_DEVTOOLS__ !== 'undefined') {
   __THREE_DEVTOOLS__.dispatchEvent(new CustomEvent('observe', { detail: Render }));
 }
 
-var lastTime = 0;
-function Update(time){
-    time *= 0.001; //to seconds;
-    let dt = time - lastTime;
-    lastTime = time;
-    if(isNaN(dt)) return;
+function UpdateBillboards(){
+    for(let bb of Billboards){
+        bb.LookCamera();
+    }
+}
 
+function HandleInput(dt){
     if(joystick.w) MainCamera.position.z -= 10*dt;
     if(joystick.s) MainCamera.position.z += 10*dt;
     if(joystick.a) MainCamera.position.x -= 10*dt;
@@ -198,8 +207,29 @@ function Update(time){
     if(Math.abs(joystick.my) > 0){
         MainCamera.rotateX(-T.MathUtils.degToRad(joystick.my * dt * mouseSensitivity));
     }
-    console.log(joystick.mx, joystick.my);
+}
 
+let center = new T.Vector2(0, 0);
+function HandleCrosshair(){
+    Raycaster.setFromCamera(center, MainCamera);
+    
+
+    let intersections = Raycaster.intersectObjects(RaycasterTargets);
+    if(intersections.length > 0){
+        console.log(intersections[0].object.name);
+    }
+    
+}
+
+function Update(time){
+    time *= 0.001; //to seconds;
+    let dt = time - lastTime;
+    lastTime = time;
+    if(isNaN(dt)) return;
+
+    UpdateBillboards();
+    HandleInput(dt);
+    HandleCrosshair();
 
 }
 

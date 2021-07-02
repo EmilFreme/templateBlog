@@ -4,7 +4,7 @@ layout: default
 ---
 
 <div id="canva"></div>
-
+<div id="crosshair"></div>
 
 Ops, parece que não há suporte a WebGL ou sua coneção está muito lenta, veja a
 versão simplificada
@@ -18,6 +18,17 @@ versão simplificada
     bottom:0;
     background: #000000;
 
+}
+
+#crosshair{
+background-image: url(/assets/crosshair.png);
+position: absolute;
+width:40px;
+height:40px;
+margin-top:30px;
+margin-left:-20px;
+transform-origin: center;
+transform:translate(50vw, 50vh);
 }
 </style>
 <script type="module" src="assets/js/showcase.js">
