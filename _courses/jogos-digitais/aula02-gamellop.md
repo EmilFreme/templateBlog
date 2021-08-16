@@ -1,11 +1,11 @@
 ---
 layout: classContent
-title: "Aula 02: Game Loop, Game Manager e Interfaces"
+title: "Game Loop, Game Manager e Interfaces"
 course: "Jogos Digitais"
 sectionNo: 0
 section: "Preludio: Breakout"
 lectureOrder: 1
-lecture: "Game Loop, Game Manager e Interfaces"
+lecture: "Aula 02: Game Loop, Game Manager e Interfaces"
 itemOrder: 0
 type: "Slides"
 ---

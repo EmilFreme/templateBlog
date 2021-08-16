@@ -1,11 +1,11 @@
 ---
 layout: classContent
-title: "Aula 05: Otimizações e Áudio"
+title: "Otimizações e Áudio"
 course: "Jogos Digitais"
 sectionNo: 1
 section: "Universo 2D"
 lectureOrder: "2"
-lecture: "Otimização e Áudio"
+lecture: "Aula 05: Otimização e Áudio"
 itemOrder: "0"
 type: "Slides"
 ---

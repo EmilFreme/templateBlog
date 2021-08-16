@@ -1,11 +1,11 @@
 ---
 layout: classContent
-title: "Aula 17: Iluminação"
+title: "Iluminação"
 course: "Jogos Digitais"
 sectionNo: 4
 section: "Universo 3D"
 lectureOrder: "2"
-lecture: "Iluminação"
+lecture: "Aula 17: Iluminação"
 itemOrder: "0"
 type: "Slides"
 ---

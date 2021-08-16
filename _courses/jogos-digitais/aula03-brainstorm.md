@@ -1,11 +1,11 @@
 ---
 layout: classContent
-title: "Aula03: Game Design Brainstorm"
+title: "Game Design Brainstorm"
 course: "Jogos Digitais"
 sectionNo: 1
 section: "Universo 2D"
 lectureOrder: "0"
-lecture: "Game Design Brainstorm"
+lecture: "Aula03: Game Design Brainstorm"
 itemOrder: "0"
 type: "Slides"
 ---

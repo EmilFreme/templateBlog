@@ -1,11 +1,11 @@
 ---
 layout: classContent
-title: "Aula 04: Animaçao 2D"
+title: "Animaçao 2D"
 course: "Jogos Digitais"
 sectionNo: 1
 section: "Universo 2D"
 lectureOrder: "1"
-lecture: "Animação 2D"
+lecture: "Aula 04: Animação 2D"
 itemOrder: "0"
 type: "Slides"
 ---
