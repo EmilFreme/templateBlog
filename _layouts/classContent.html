@@ -13,12 +13,21 @@ layout: default
     </h1>
     <ol>
     <ul class="courseNav__links">
-        <li> <span class="mdi mdi-home"></span> <a href="#"> Index </a></li>
+        {% assign urlsections = page.url | split: "/" %}
+        
+        {% if urlsections[-2] == "" %}
+          {% assign indexurl = "#" %}
+        {%else%}
+          {% assign indexpath = urlsections[-2] | replace: "-", "_" | replace: "//", "" %}
+          {% assign indexurl = site.baseurl | append: indexpath | append: ".html" %}
+        {%endif%}
+        
+        <li> <span class="mdi mdi-home"></span> <a href="{{indexurl}}"> Index </a></li>
 {% assign courseContents = site.courses | where: "course", page.course %}
 
-{% assign itemsBySections =  courseContents 
-    | sort: "sectionNo" 
-    | group_by:"section" 
+{% assign itemsBySections =  courseContents
+    | sort: "sectionNo"
+    | group_by:"section"
 %}
 
 {% for sectionItems in itemsBySections %}
@@ -27,16 +36,20 @@ layout: default
             <span class="mdi mdi-rocket-launch"></span>
             <a href="#">{{sectionItems.name}}</a>
 
-            {% assign lectures = sectionItems.items | group_by: "lecture" %}
+            {% assign lectures = sectionItems.items
+            | sort: "lectureOrder"
+            | group_by: "lecture"%}
 
             <div class="mission__content">
                 <ul>
                     {% for lecture in lectures %}
                     <li class="classToggle">
                         <span class="mdi mdi-arrow-right-drop-circle closed"></span>
-                        {{ lecture.name }} 
+                        {{ lecture.name }}
                         <ul class="classContent closed">
-                            {% for content in lecture.items %}
+                            {% assign contents = lecture.items
+                            | sort: "itemOrder" %}
+                            {% for content in contents %}
                             {% if content.type == "Slides" %}
                             <li>
                                 <span class="mdi mdi-presentation"></span>
@@ -82,17 +95,53 @@ layout: default
 
 
 <style type="text/css">
+
+    
+    /* Hide scrollbar for Chrome, Safari and Opera */
+#courseNav::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+#courseNav {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+    
+    /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+
 header{position:relative;}
 
 #courseNav{
     position:fixed;
     top:0px;
     left:0px;
-    width:85%;
+    width:25%;
     height:100%;
     color: #FFFFFF;
     background-color: #686868;
     overflow:hidden;
+    overflow-y:auto;
     transition: width 1.5s, padding 1.5s;
     padding:16px;
 }
@@ -106,7 +155,7 @@ header{position:relative;}
 }
 
 #courseNav .wrapper{
-    width:75vw;
+    width:23vw;
 }
 
 #courseNav.closed{
@@ -115,7 +164,7 @@ header{position:relative;}
 }
 
 #couseNav.open{
-    width:85%;
+    width:25%;
 }
 
 #courseNav__toggle {
@@ -144,7 +193,7 @@ header{position:relative;}
 }
 
 #courseNav__toggle.open{
-    transform: translateX(84vw);
+    transform: translateX(24vw);
     opacity: 1;
 }
 
@@ -240,10 +289,27 @@ header{position:relative;}
 .mobileHide{
     display:none;
 }
+
+#courseNav{ width: 85% }
+
+#courseNav .wrapper{
+    width:75vw;
+}
+
+#couseNav.open{
+    width:85%;
+}
+
+#courseNav__toggle.open{
+    transform: translateX(84vw);
+    opacity: 1;
+}
+
 }
 
 .lectureContent{
     margin-top:40px;
+    margin-left:40px;
     padding:1em;
 }
 

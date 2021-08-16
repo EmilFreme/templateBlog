@@ -1,6 +1,8 @@
 ---
 title: Unity
-layout: guia
+course: "Unity"
+coursePath: "_unity"
+layout: classContent
 ---
 
 # Documentos sobre Unity
