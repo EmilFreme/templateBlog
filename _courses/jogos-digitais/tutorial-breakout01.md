@@ -5,7 +5,7 @@ course: "Jogos Digitais"
 sectionNo: 0
 section: "Preludio: Breakout"
 lectureOrder: 0
-lecture: "Apresentação da Disciplina"
+lecture: "Aula 01: Apresentação da Disciplina"
 itemOrder: 1
 type: "Tutorial"
 ---
