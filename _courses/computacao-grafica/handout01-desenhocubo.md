@@ -10,6 +10,6 @@ itemOrder: "1"
 type: "Tarefas"
 ---
 
-# &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Faça o exercício na sua conta: [link](https://docs.google.com/document/d/1fvisceUAUE7QWubFpvNouUNpbAg1dVBh/edit?usp=sharing&ouid=116972197927145487361&rtpof=true&sd=true)
+# &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Faça o exercício na sua conta: [link](https://docs.google.com/document/d/1fvisceUAUE7QWubFpvNouUNpbAg1dVBh/copy?usp=sharing&ouid=116972197927145487361&rtpof=true&sd=true)
 
-<iframe src="https://docs.google.com/document/d/e/2PACX-1vRHeuVQ9rBlKBb3CpPAOl4knlyk1Eb5jLhpq2XEm0-0FzXT5APPufbcIh8yIXvcnIgV_2owSvIAtNJZ/pub?embedded=true"></iframe>
+<iframe src="https://docs.google.com/document/d/1fvisceUAUE7QWubFpvNouUNpbAg1dVBh/preview"></iframe>
