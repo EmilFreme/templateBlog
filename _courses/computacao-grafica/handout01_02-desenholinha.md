@@ -3,7 +3,7 @@ layout: classContent
 title: "Desenho de uma Linha"
 course: "Computação Gráfica"
 sectionNo: 0
-section: "Introdução"
+section: "Rasterizador"
 lectureOrder: "0"
 lecture: "Introdução"
 itemOrder: "2"
