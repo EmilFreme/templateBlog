@@ -5,7 +5,7 @@ course: "Computação Gráfica"
 sectionNo: 0
 section: "Rasterizador"
 lectureOrder: "3"
-lecture: "Renderização e Supersampling"
+lecture: "Transformações Geométricas"
 itemOrder: "0"
 type: "Slides"
 ---
