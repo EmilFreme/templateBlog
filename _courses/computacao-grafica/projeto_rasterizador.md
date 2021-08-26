@@ -4,7 +4,7 @@ title: "Projeto 1 - Rasterizador"
 course: "Computação Gráfica"
 sectionNo: 0
 section: "Rasterizador"
-lectureOrder: 1
+lectureOrder: 99
 lecture: "Detalhes do Projeto"
 itemOrder: 0
 type: "Tarefas"
