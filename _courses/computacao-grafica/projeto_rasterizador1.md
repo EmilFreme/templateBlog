@@ -1,6 +1,6 @@
 ---
 layout: classContent
-title: "Projeto 1 - Rasterizador"
+title: "Projeto 1 - Rasterizador: parte 1"
 course: "Computação Gráfica"
 sectionNo: 0
 section: "Rasterizador"
