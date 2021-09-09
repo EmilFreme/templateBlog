@@ -3,6 +3,10 @@ title: Showcase
 layout: default
 ---
 
+<script>
+window.location.replace("{{site.baseurl}}showcase_simple.html")
+</script>
+
 <div id="canva"></div>
 <div id="crosshair"></div>
 
