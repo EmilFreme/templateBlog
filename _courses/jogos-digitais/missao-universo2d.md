@@ -10,4 +10,4 @@ itemOrder: "0"
 type: "Tarefas"
 ---
 
-# TBA
+<iframe src="https://docs.google.com/document/d/e/2PACX-1vRW2UQFo7swKISFer3CRaOsS7JFVOvTFqqfGcRnL4Y5FQ-CFClA_r7V3zXm_xX6yLMKu8bW6hVmFfcG/pub?embedded=true"></iframe>
