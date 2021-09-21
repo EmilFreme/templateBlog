@@ -3,8 +3,8 @@ layout: classContent
 title: "Game Design"
 course: "Jogos Digitais"
 sectionNo: 3
-section: "Universo 2D"
-lectureOrder: "7"
+section: "Boss 2D"
+lectureOrder: "0"
 lecture: "Aula 10: Game Design"
 itemOrder: "0"
 type: "Slides"
