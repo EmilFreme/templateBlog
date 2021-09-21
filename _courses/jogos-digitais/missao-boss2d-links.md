@@ -4,7 +4,7 @@ title: "Links de Entrega"
 course: "Jogos Digitais"
 sectionNo: 3
 section: "Boss 2D"
-lectureOrder: "5"
+lectureOrder: "99"
 lecture: "Detalhes da Missão"
 itemOrder: "1"
 type: "Tarefas"
