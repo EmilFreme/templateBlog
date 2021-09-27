@@ -5,7 +5,7 @@ course: "Jogos Digitais"
 sectionNo: 3
 section: "Universo 2D"
 lectureOrder: "6"
-lecture: "Aula 9: Cenário e Contaudo Procedural"
+lecture: "Aula 09: Cenário e Contaudo Procedural"
 itemOrder: "1"
 type: "Slides"
 ---
