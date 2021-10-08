@@ -4,7 +4,7 @@ title: "Otimizações e Áudio"
 course: "Jogos Digitais"
 sectionNo: 1
 section: "Universo 2D"
-lectureOrder: "3"
+lectureOrder: "6"
 lecture: "Aula 06: Otimização e Áudio"
 itemOrder: "0"
 type: "Slides"

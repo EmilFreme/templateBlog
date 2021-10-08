@@ -6,7 +6,7 @@ sectionNo: 1
 section: "Universo 2D"
 lectureOrder: "99"
 lecture: "Detalhes da Missão"
-itemOrder: "0"
+itemOrder: "99"
 type: "Tarefas"
 ---
 

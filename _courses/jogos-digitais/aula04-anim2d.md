@@ -4,7 +4,7 @@ title: "Animaçao 2D"
 course: "Jogos Digitais"
 sectionNo: 1
 section: "Universo 2D"
-lectureOrder: "1"
+lectureOrder: "4"
 lecture: "Aula 04: Animação 2D"
 itemOrder: "0"
 type: "Slides"

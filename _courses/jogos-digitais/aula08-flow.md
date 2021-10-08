@@ -2,9 +2,9 @@
 layout: classContent
 title: "Flow, Mecânicas e Balanceamento"
 course: "Jogos Digitais"
-sectionNo: 3
+sectionNo: 1
 section: "Universo 2D"
-lectureOrder: "5"
+lectureOrder: "8"
 lecture: "Aula08: Flow, Mecânicas e Balanceamento"
 itemOrder: "0"
 type: "Tarefas"

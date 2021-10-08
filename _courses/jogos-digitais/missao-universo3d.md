@@ -2,11 +2,11 @@
 layout: classContent
 title: "Documento da Missão"
 course: "Jogos Digitais"
-sectionNo: 4
+sectionNo: 3
 section: "Universo 3D"
-lectureOrder: "6"
+lectureOrder: "99"
 lecture: "Detalhes da Missão"
-itemOrder: "0"
+itemOrder: "99"
 type: "Tarefas"
 ---
 

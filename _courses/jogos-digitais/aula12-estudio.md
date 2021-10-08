@@ -2,9 +2,9 @@
 layout: classContent
 title: "Estúdio"
 course: "Jogos Digitais"
-sectionNo: 4
+sectionNo: 3
 section: "Boss 2D"
-lectureOrder: "2"
+lectureOrder: "12"
 lecture: "Aula 12: Estúdio"
 itemOrder: "0"
 type: "Slides"

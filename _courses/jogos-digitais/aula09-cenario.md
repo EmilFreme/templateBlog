@@ -2,11 +2,11 @@
 layout: classContent
 title: "Cenário e Conteúdo Procedural"
 course: "Jogos Digitais"
-sectionNo: 3
+sectionNo: 1
 section: "Universo 2D"
-lectureOrder: "6"
+lectureOrder: "9"
 lecture: "Aula 09: Cenário e Contaudo Procedural"
-itemOrder: "1"
+itemOrder: "0"
 type: "Slides"
 ---
 

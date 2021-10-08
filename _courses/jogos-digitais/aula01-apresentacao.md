@@ -4,7 +4,7 @@ title: "Apresentação da Disciplina"
 course: "Jogos Digitais"
 sectionNo: 0
 section: "Preludio: Breakout"
-lectureOrder: 0
+lectureOrder: 1
 lecture: "Aula 01: Apresentação da Disciplina"
 itemOrder: 0
 type: "Slides"

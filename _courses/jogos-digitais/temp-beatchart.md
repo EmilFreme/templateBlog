@@ -1,13 +1,13 @@
 ---
 layout: classContent
-title: "Asteroids 3D: Parte 03"
+title: "Template BeatChart"
 course: "Jogos Digitais"
 sectionNo: 99
 section: "Materiais Extras"
-lectureOrder: "0"
+lectureOrder: "99"
 lecture: "Templates"
-itemOrder: "0"
+itemOrder: "99"
 type: "Handout"
 ---
 
-# TBA
+[Acesse aqui](https://docs.google.com/spreadsheets/d/1u-QtJgL-fJMA84pvjrgWIHIEyci9H9PIlh6rnwNMfcI/edit?usp=sharing)

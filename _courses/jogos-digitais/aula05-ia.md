@@ -4,7 +4,7 @@ title: "Inteligência Artificial"
 course: "Jogos Digitais"
 sectionNo: 1
 section: "Universo 2D"
-lectureOrder: "2"
+lectureOrder: "5"
 lecture: "Aula 05: Inteligência Artificial"
 itemOrder: "0"
 type: "Slides"

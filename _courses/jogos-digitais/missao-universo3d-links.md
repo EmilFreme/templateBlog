@@ -2,11 +2,11 @@
 layout: classContent
 title: "Liks de Entrega"
 course: "Jogos Digitais"
-sectionNo: 4
+sectionNo: 3
 section: "Universo 3D"
-lectureOrder: "6"
+lectureOrder: "99"
 lecture: "Detalhes da Missão"
-itemOrder: "1"
+itemOrder: "99"
 type: "Tarefas"
 ---
 

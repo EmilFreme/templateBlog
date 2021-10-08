@@ -4,7 +4,7 @@ title: "Game Design Brainstorm"
 course: "Jogos Digitais"
 sectionNo: 1
 section: "Universo 2D"
-lectureOrder: "0"
+lectureOrder: "3"
 lecture: "Aula03: Game Design Brainstorm"
 itemOrder: "0"
 type: "Slides"

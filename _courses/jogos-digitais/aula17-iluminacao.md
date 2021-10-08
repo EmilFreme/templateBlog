@@ -2,10 +2,10 @@
 layout: classContent
 title: "Iluminação"
 course: "Jogos Digitais"
-sectionNo: 4
+sectionNo: 3
 section: "Universo 3D"
-lectureOrder: "2"
-lecture: "Aula 17: Iluminação"
+lectureOrder: "14"
+lecture: "Aula 14: Iluminação"
 itemOrder: "0"
 type: "Slides"
 ---

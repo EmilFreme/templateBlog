@@ -4,7 +4,7 @@ title: "Game Loop, Game Manager e Interfaces"
 course: "Jogos Digitais"
 sectionNo: 0
 section: "Preludio: Breakout"
-lectureOrder: 1
+lectureOrder: 2
 lecture: "Aula 02: Game Loop, Game Manager e Interfaces"
 itemOrder: 0
 type: "Slides"

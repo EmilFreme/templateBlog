@@ -2,11 +2,11 @@
 layout: classContent
 title: "Links de Entrega"
 course: "Jogos Digitais"
-sectionNo: 3
+sectionNo: 2
 section: "Boss 2D"
 lectureOrder: "99"
 lecture: "Detalhes da Missão"
-itemOrder: "1"
+itemOrder: "99"
 type: "Tarefas"
 ---
 

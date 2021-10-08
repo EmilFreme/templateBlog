@@ -2,9 +2,9 @@
 layout: classContent
 title: "Pipeline 3D"
 course: "Jogos Digitais"
-sectionNo: 4
+sectionNo: 3
 section: "Boss 2D"
-lectureOrder: "1"
+lectureOrder: "11"
 lecture: "Aula 11: Pipeline 3D"
 itemOrder: "0"
 type: "Slides"
