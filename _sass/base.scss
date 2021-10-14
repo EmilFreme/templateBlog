@@ -163,7 +163,7 @@ footer{
 }
 
 .article-card__text{
-	height:150px;
+	min-height:50px;;
 	padding:2pt;
 	overflow:hidden;
 	color:$preto;
@@ -178,7 +178,9 @@ footer{
 			padding-left:10px;
 			display: flex;
     		flex-flow: column;
-    		justify-content: center;
+		flex-direction: row;
+    		justify-content: flex-start;
+		align-items:baseline;
 		p{padding:0.2em;}
 	}
 			.article-title{
@@ -204,7 +206,7 @@ footer{
 
 .first-row .article-card{
 	.article-card__title{
-		height:150px;
+		min-height:75px;
 		display: flex;
 		align-items:flex-end;
 		background-color:$aqua;
@@ -229,7 +231,8 @@ footer{
 
 
 .post_header{
-		height:250px;
+		//height:250px;
+		margin-top:50px;
 		width:100%;
 		background-color:$aqua;
 		display:flex;
@@ -239,7 +242,7 @@ footer{
 
 
 .post_header--content{
-		background-color: $vinho;
+		//background-color: $vinho;
 		height:100px;
 		width:100%;
 		display:flex;
@@ -261,6 +264,7 @@ footer{
 			max-width:960px;
 			width:100%;
 			margin:0 auto;
+			text-align:right;
 	}
 
 }
