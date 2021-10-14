@@ -21,7 +21,9 @@
 title: Lab Jogos e RV | Insper
 email: labrv@insper.edu.br
 description: >- # this means to ignore newlines until "baseurl:"
-  Neste blog você irá encontrar trabalhos de alunos desenvolvídos nas matérias de Jogos Digitais do sétimo semestre de Eng. da Computação, e também alguns projetos feitos na matéria eletiva de Realidade Virtual e Aumentada.
+  Neste blog você irá encontrar trabalhos de alunos desenvolvídos nas matérias
+  de Jogos Digitais do sétimo semestre de Eng. da Computação, e também alguns
+  projetos feitos na matéria eletiva de Realidade Virtual e Aumentada.
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://jogos-digitais.s3.amazonaws.com" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
