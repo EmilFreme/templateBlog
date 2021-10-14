@@ -3,6 +3,20 @@ title: Showcase
 layout: page
 ---
 
+<div class="projectSwitch" style="position: fixed; top:0; left:0; transform:
+	rotate(90deg); transform-origin: bottom left; background: #282828;
+	border-radius: 15px 15px 0 0; color:white; font-size:12pt">
+	<table style="margin:0">
+		<tr> 
+				<td style="background:#b00; border:0">
+						<a href="#" style="color:white">Showcase</a>
+				</td>
+				<td style="border-radius: 0 15px 0 0; border:0">
+						<a href="#" style="color:white">Projetos</a>
+				</td>
+		</tr>
+	</table>
+</div>
 Projetos selecionados de nosso alunos
 
 <!--{:.acordeon .open}-->
