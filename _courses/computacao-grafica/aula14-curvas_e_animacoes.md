@@ -12,4 +12,4 @@ type: "Slides"
 
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vR6hyeX-pH-GL9D9YLK0rtmN1Je5jrOEBOWmZlNnSrKtzFpyIfIc1RNvXsXTbRC-MXLhF68fLyfBsyX/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="629" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
-## &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Acesse o documento: [GoogleDocs](https://docs.google.com/presentation/d/1tMZ1aylB14l17oItLBGFxMRtTH6ieU16zta1adomWdE/preview?rm=minimal&usp=sharing) / [PDF]()
+## &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Acesse o documento: [GoogleDocs](https://docs.google.com/presentation/d/1tMZ1aylB14l17oItLBGFxMRtTH6ieU16zta1adomWdE/preview?rm=minimal&usp=sharing) / [PDF](https://drive.google.com/file/d/1Cyn_0sH9weR3WLHnHwuSoEkcOiNS3L3k/view?usp=sharing)
