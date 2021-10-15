@@ -1,11 +1,10 @@
----
-title: Showcase
-layout: page
----
+
+# Projetos selecionados de nosso alunos
 
 <div class="projectSwitch" style="position: fixed; top:0; left:0; transform:
 	rotate(90deg); transform-origin: bottom left; background: #282828;
-	border-radius: 15px 15px 0 0; color:white; font-size:12pt">
+	border-radius: 15px 15px 0 0; color:white; font-size:12pt"
+        onClick="toggleProjects()">
 	<table style="margin:0">
 		<tr> 
 				<td style="background:#b00; border:0">
@@ -17,7 +16,6 @@ layout: page
 		</tr>
 	</table>
 </div>
-Projetos selecionados de nosso alunos
 
 <!--{:.acordeon .open}-->
 > # 2021.1
