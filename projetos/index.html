@@ -3,21 +3,29 @@ title: Home
 layout: default
 ---
 <div class="projectSwitch" style="position: fixed; top:0; left:0; transform:
-	rotate(90deg); transform-origin: bottom left; background: #282828;
-	border-radius: 15px 15px 0 0; color:white; font-size:12pt">
-	<table style="margin:0">
-		<tr> 
-				<td style="border:0">
-						<a href="#" style="color:white">Showcase</a>
-				</td>
-				<td style="background:#b00; border-radius: 0 15px 0 0; border:0">
-						<a href="#" style="color:white">Projetos</a>
-				</td>
-		</tr>
-	</table>
+    rotate(90deg); transform-origin: bottom left; background: #282828;
+    border-radius: 15px 15px 0 0; color:white; font-size:12pt"
+                           onClick="toggleProjects()">
+    <table style="margin:0">
+        <tr> 
+                <td style="border:0">
+                        <a href="#" style="color:white">Showcase</a>
+                </td>
+                <td style="background:#b00; border-radius: 0 15px 0 0; border:0">
+                        <a href="#" style="color:white">Projetos</a>
+                </td>
+        </tr>
+    </table>
 </div>
 
-<div class="mainWrapper">
+<div id="showcaseWrapper" class="mainWrapper">
+        {%capture showcase%}
+        {% include showcase_simple.md %}
+        {% endcapture %}
+        {{ showcase | markdownify }}
+</div>
+
+<div class="mainWrapper" id="projectsWrapper">
 
     <div class="row first-row">
         {% for post in paginator.posts %}
@@ -42,9 +50,9 @@ layout: default
             </div>
             <div class="article-card__text">
                 <p>
-		{% assign leExperpt =  post.excerpt | newline_to_br | split: "<br />" %}
+        {% assign leExperpt =  post.excerpt | newline_to_br | split: "<br />" %}
 
-		{{ leExperpt[0] }}
+        {{ leExperpt[0] }}
                 </p>
             </div>
         </a>
@@ -74,3 +82,24 @@ layout: default
     </div>
 
 </div>
+<style>
+        img{max-width:95%}
+</style>
+<script>
+    let showcase = document.getElementById("showcaseWrapper");
+    let projects = document.getElementById("projectsWrapper");
+    showcase.style.display = "none";
+    function toggleProjects(){
+        if(showcase.style.display == "none"){
+            showcase.style.display = "block";
+            projects.style.display = "none";
+        }
+        else{
+            showcase.style.display = "none";
+            projects.style.display = "block";
+        }
+    }
+            
+
+
+</script>
