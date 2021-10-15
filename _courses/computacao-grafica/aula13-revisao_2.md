@@ -1,11 +1,11 @@
 ---
 layout: classContent
-title: "Aula 13: Revisão 2 (só slides)"
+title: "Aula 13: Revisão 2"
 course: "Computação Gráfica"
 sectionNo: 0
 section: "Rasterizador"
 lectureOrder: "12"
-lecture: "Revisão 2 (só slides)"
+lecture: "Curvas e Animações"
 itemOrder: "0"
 type: "Slides"
 ---
