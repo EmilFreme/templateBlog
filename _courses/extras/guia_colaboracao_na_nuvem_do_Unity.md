@@ -1,9 +1,9 @@
 ---
 layout: classContent
 title: "Colaboração na nuvem na Unity"
-course: "Unity"
+course: "Materiais Extras"
 sectionNo: 0
-section: "Materiais de Consulta"
+section: "Unity"
 lectureOrder: "0"
 lecture: "Guias"
 itemOrder: "0"
