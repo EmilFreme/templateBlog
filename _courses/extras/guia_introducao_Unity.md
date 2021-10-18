@@ -1,9 +1,9 @@
 ---
 layout: classContent
 title: "Come Come 3D"
-course: "Introdução a Unity"
+course: "Materiais Extras"
 sectionNo: 0
-section: "Materiais Extras"
+section: "Unity"
 lectureOrder: "0"
 lecture: "Outros Tutoriais"
 itemOrder: "-1"
