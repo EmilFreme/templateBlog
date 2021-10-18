@@ -1,19 +1,21 @@
 ---
-title: Jogos Digitais.
-layout: aula
+title: Disciplina - Jogos Digitais
+course: "Jogos Digitais"
+coursepath: jogos-digitais
+layout: classContent
 ---
 
-Bem vindo ao curso de Jogos Digitais 2021/1
+# Bem vindo a disciplina de Jogos Digitais 2021/2
 
-**Professor**
+- **Curso:** Engenharia da Computação - Sétimo Semestre -
+  [Insper](https://www.insper.edu.br/)
+- **Disciplina:** Jogos Digitais
+- **Local:** Laborátorio de Realidade Virtual e Jogos Digitais
+- **Equipe:**
+	- Prof. Luciano Soares \<lpsoares at insper.edu.br\>
+	- Téc. Pedro Emil Freme \<pedrohepf at insper.edu.b\>
+	- Téc. Willian Rodrigues \<willianrsl at insper.edu.br\>
 
-- Luciano Soares
+Nesta sessão do site você encontra todas as aulas e matériais diversos da
+disciplina como Tutoriais, Regras de Projetos e Vídeos.
 
-{:.aviso}
-Um aviso aqui
-
-1. lorem
-1. ipsum
-1. dolor
-1. sit
-1. amet

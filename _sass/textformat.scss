@@ -1,0 +1,114 @@
+$base-font: "Source Sans Pro", sans-serif;
+$secondary-font: "Lato", sans-serif;
+$thin-face:     300;
+$regular-face:  400;
+$bold-face:     600;
+$bolder-face:   900;
+
+body{
+    font-size: 14px;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: $secondary-font;
+    font-weight: $bold-face;
+    padding: 0.5em 0;
+}
+
+h1 {font-size:25px;}
+h2 {font-size:22px;}
+h3 {font-size:20px;}
+h4 {font-size:18px;}
+h5 {font-size:16px;}
+h6 {font-size:14px;}
+
+.lectureContent ul li::before{
+    content: "\F0BAD";
+    font-family: "Material Design Icons";
+    margin-right:1em;
+}
+
+.highlighter-rouge{
+    margin:1em;
+    padding:0.5em;
+    border:1px dashed $preto;
+}
+
+pre.highlight{
+    padding:0.5em;
+}
+
+div[data-filename]::before{
+    content:attr(data-filename);
+    line-height:1.5em;
+}
+
+.dica::before{
+    content: "Dica";
+    display: block;
+    color:$branco;
+    background-color:$aqua;
+    font-size: 1.2em;
+    font-weight: $bold-face;
+    padding: 0;
+    margin-bottom:0.5em;
+}
+
+.dica{
+    border: solid 1px $aqua;
+    padding: 0.5em;
+    margin: 0.5em 0;
+
+}
+
+.alerta::before{
+    content: "Alerta";
+    display: block;
+    color:$branco;
+    background-color:$vermelho;
+    font-size: 1.2em;
+    font-weight: $bold-face;
+    padding: 0.2em;
+    margin-bottom:0.5em;
+}
+
+.alerta{
+    border: solid 1px $vermelho;
+    padding: 0.5em;
+    margin: 0.5em 0;
+}
+
+.aviso::before{
+    content: "Aviso";
+    display: block;
+    color:$branco;
+    background-color:$amarelo;
+    font-size: 1.2em;
+    font-weight: $bold-face;
+    padding: 0.2em;
+    margin-bottom:0.5em;
+}
+
+.aviso{
+    border: solid 1px $amarelo;
+    padding: 0.5em;
+    margin: 0.5em 0;
+}
+
+.citacao::before{
+    content: "“";
+    font-size:3em;
+}
+
+.citacao::after{
+    content: attr(data-name);
+    display: block;
+    text-align: right;
+}
+
+.citacao::after::first-letter{
+    font-size: 3em;
+}
+
+.citacao{text-align: center;}
+

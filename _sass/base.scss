@@ -1,19 +1,5 @@
-// Cores
-$preto:     #000000;
-$branco:    #ffffff;
-$vermelho:  #c00026;
-
-//Cores Secundárias
-$vinho:     #a62b4d;
-$aqua:      #009491;
-$cinza:		#414042;
-$amarelo:   #A69542;
-
-$base-font: "Source Sans Pro", sans-serif;
-$thin-face:     300;
-$regular-face:  400;
-$bold-face:     600;
-$bolder-face:   900;
+@import "colors";
+@import "textformat";
 
 html{background:$cinza;}
 
@@ -28,12 +14,31 @@ ol{
 	list-style-type: decimal;
 	li{
 		margin:0.2em;
-}
+	}
 }
 
 a{
 	text-decoration:none;
-	}
+	color: $vinho;
+	transition:1s;
+}
+
+header a:hover{
+	color:$ciano;
+}
+
+a:hover{
+	color:$vinho;
+	text-shadow: 0 0 1px #FF0000, 0 0 2px #0000FF;
+}
+
+iframe {
+	display: block;           /* iframes are inline by default */
+	border: none;             /* Reset default border */
+	height: 84vh !important;  /* Viewport-relative units */
+	width: 100% !important;	  /* Viewport-relative units */
+	
+}
 
 header{
     position: fixed;
@@ -60,18 +65,30 @@ header{
 
 }
 
+table{
+	margin:1em;
+}
 
+th{
+	font-weight: $bolder-face;
+	padding:1em;
+	border: solid 1px $preto;
+	vertical-align: middle;
+}
+
+td{
+	padding: 1em;
+	border: solid 1px $preto;
+}
 
 footer{
     width:100%;
     background-color:$cinza;
-    padding:20px;
+    padding:8px;
 	color:$branco;
 	text-align:center;
 	a{color:$branco;}
-    }
-
-
+}
 
 .centered{text-align:center;}
 //div{border: 1px solid red; margin: -1px;}
@@ -82,6 +99,10 @@ footer{
 
 .pull-right{
     margin-left: auto;
+}
+
+.aulaWrapper{
+	margin-top: 40px
 }
 
 .mainWrapper{
@@ -130,12 +151,19 @@ footer{
 	flex-wrap:wrap;
 }
 
+.principal{
+	display:flex;
+	flex-wrap:wrap;
+	min-height: 91vh;
+}
+
 .article-card{
 	padding:10px;
 	cursor:pointer;
 }
+
 .article-card__text{
-	height:150px;
+	min-height:50px;;
 	padding:2pt;
 	overflow:hidden;
 	color:$preto;
@@ -150,7 +178,9 @@ footer{
 			padding-left:10px;
 			display: flex;
     		flex-flow: column;
-    		justify-content: center;
+		flex-direction: row;
+    		justify-content: flex-start;
+		align-items:baseline;
 		p{padding:0.2em;}
 	}
 			.article-title{
@@ -176,7 +206,7 @@ footer{
 
 .first-row .article-card{
 	.article-card__title{
-		height:150px;
+		min-height:75px;
 		display: flex;
 		align-items:flex-end;
 		background-color:$aqua;
@@ -201,7 +231,8 @@ footer{
 
 
 .post_header{
-		height:250px;
+		//height:250px;
+		margin-top:50px;
 		width:100%;
 		background-color:$aqua;
 		display:flex;
@@ -211,7 +242,7 @@ footer{
 
 
 .post_header--content{
-		background-color: $vinho;
+		//background-color: $vinho;
 		height:100px;
 		width:100%;
 		display:flex;
@@ -233,12 +264,14 @@ footer{
 			max-width:960px;
 			width:100%;
 			margin:0 auto;
+			text-align:right;
 	}
 
 }
 
 .aula_content {
 	padding-left:2em !important;
+	padding-bottom:0px !important;
 	.post_header{
 		background: none;
 		margin-top:50px;
@@ -270,22 +303,26 @@ footer{
 			font-size:1.6em;
 			font-weight:$bold-face;
 			padding-bottom:5px;
+			margin-bottom: 0.75em;
 		}
 		h3{
 			font-size:1.6em;
 			font-weight:$thin-face;
 			padding-bottom:5px;
-			border-top:1px dashed $vinho
+			border-top:1px dashed $vinho;
+			margin-bottom: 0.75em;
 		}
 		h4{
 			font-size:1.2em;
 			font-weight:$bolder-face;
 			padding-bottom:5px;
+			margin-bottom: 0.375em;
 		}
 		h5{
 			font-size:1.2em;
 			font-weight:$bold-face;
 			padding-bottom:5px;
+			margin-bottom: 0.375em;
 		}
 		h6{
 			font-size:1.2em;
@@ -469,70 +506,16 @@ footer{
 }
 
 
-.dica::before{
-	content: "Dica";
-	display: block;
-	color:$branco;
-	background-color:$aqua;
-	font-size: 1.2em;
-	font-weight: $bold-face;
-	padding: 0.2em;
-	margin-bottom:0.5em;
+
+.acordeon.open h1:first-of-type::after{
+    content: ">";
+    float:right;
 }
 
-.dica{
-	border: solid 1px $aqua;
-	padding: 0.5em;
 
+
+.pagination{
+  text-align: center;
+  padding:1em;
+  font-size: 1.5em;
 }
-
-.alerta::before{
-	content: "Alerta";
-	display: block;
-	color:$branco;
-	background-color:$vermelho;
-	font-size: 1.2em;
-	font-weight: $bold-face;
-	padding: 0.2em;
-	margin-bottom:0.5em;
-}
-
-.alerta{
-	border: solid 1px $vermelho;
-	padding: 0.5em;
-
-}
-
-.aviso::before{
-	content: "Aviso";
-	display: block;
-	color:$branco;
-	background-color:$amarelo;
-	font-size: 1.2em;
-	font-weight: $bold-face;
-	padding: 0.2em;
-	margin-bottom:0.5em;
-}
-
-.aviso{
-	border: solid 1px $amarelo;
-	padding: 0.5em;
-
-}
-
-.citacao::before{
-	content: "“";
-	font-size:3em;
-}
-
-.citacao::after{
-	content: attr(data-name);
-	display: block;
-	text-align: right;
-}
-
-.citacao::after::first-letter{
-	font-size: 3em;
-}
-
-.citacao{text-align: center;}

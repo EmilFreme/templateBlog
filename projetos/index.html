@@ -1,0 +1,107 @@
+---
+title: Home
+layout: default
+---
+<div class="projectSwitch" style="position: fixed; top:0; left:0; transform:
+    rotate(90deg); transform-origin: bottom left; background: #282828;
+    border-radius: 15px 15px 0 0; color:white; font-size:12pt"
+                           onClick="toggleProjects()">
+    <table style="margin:0">
+        <tr> 
+                <td style="border:0">
+                        <a href="#" style="color:white">Showcase</a>
+                </td>
+                <td style="background:#b00; border-radius: 0 15px 0 0; border:0">
+                        <a href="#" style="color:white">Projetos</a>
+                </td>
+        </tr>
+    </table>
+</div>
+
+<div id="showcaseWrapper" class="mainWrapper">
+        {%capture showcase%}
+        {% include showcase_simple.md %}
+        {% endcapture %}
+        {{ showcase | markdownify }}
+</div>
+
+<div class="mainWrapper" id="projectsWrapper">
+
+    <div class="row first-row">
+        {% for post in paginator.posts %}
+        <a href="{{ post.url }}" class="article-card col-10" title="{{post.title}}">
+            <div class="article-card__title">
+                <div class="title--text">
+                    <p class="article-title">
+                    {{ post.title }}
+                    </p>
+                    <p class="article-info">
+                    {{ post.date | date_to_string }} <br>
+                    &nbsp;<!--<span>Tags: {% for tag in
+                    post.tags %}
+                    {%  if tag == post.tags.last %}
+                    {{ tag }}
+                    {% else %}
+                    {{ tag }},
+                    {% endif %}
+                    {% endfor %} </span>-->
+                    </p>
+                </div>
+            </div>
+            <div class="article-card__text">
+                <p>
+        {% assign leExperpt =  post.excerpt | newline_to_br | split: "<br />" %}
+
+        {{ leExperpt[0] }}
+                </p>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+
+    <!-- Pagination links -->
+    <div class="row">
+        <div class="pagination col-10">
+            {% if paginator.previous_page %}
+
+            <a href= "{{ paginator.previous_page_path | append: 'index.html' | replace: '//', '/'}}" class="previous">
+                Anterior
+            </a>
+            {% else %}
+            <!--<span class="previous">Anterior</span>-->
+            {% endif %}
+            <span class="page_number ">
+                <b>{{ paginator.page }}</b> de {{ paginator.total_pages }}
+            </span>
+            {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path }}/index.html" class="next">Próxima</a>
+            {% else %}
+            <!--<span class="next ">Próxima</span>-->
+            {% endif %}
+        </div>
+    </div>
+
+</div>
+<style>
+        img{width:50%; max-width:50%; text-align:center;}
+        #showcaseWrapper p {text-align: center;}
+
+</style>
+<script>
+    let showcase = document.getElementById("showcaseWrapper");
+    let projects = document.getElementById("projectsWrapper");
+    showcase.style.display = "none";
+    function toggleProjects(){
+        if(showcase.style.display == "none"){
+            showcase.style.display = "block";
+            projects.style.display = "none";
+        }
+        else{
+            showcase.style.display = "none";
+            projects.style.display = "block";
+        }
+    }
+            
+
+
+</script>

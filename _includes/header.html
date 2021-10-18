@@ -1,23 +1,106 @@
 <header>
-		<a href="{{site.baseurl}}index.html" class=link__bolder>
-        RV & Jogos | Insper
-    </a>
-	<a href="{{site.baseurl}}sobre.html">
-        Sobre
-    </a>
-	<a href="{{site.baseurl}}arquivo.html">
-        Arquivo
-    </a>
-	<a href="{{site.baseurl}}jogos_digitais.html">
-        Jogos Digitais
-    </a>
-    <!--<a>
-        Projetos
-    </a>
-    <a>
-        Categorias
-		</a>-->
-    <a class="pull-right" href="#" id="searchButton">
-        <i class="fa fa-search" aria-hidden="true"></i>
-    </a>
+    <ul>
+        <li>
+            <a href="{{site.baseurl}}index.html" class=link__bolder>
+                RV & Jogos | Insper
+            </a>
+        </li>
+        <li class="mobileShow">
+            <a href="#" onclick="toggleMobileMenu()">
+                Menu <i class="fa fa-bars"></i>
+            </a>
+            <ul id="mobileHeader">
+                <li>
+                    <a href="{{site.baseurl}}projetos/index.html">
+                        Projetos
+                    </a>
+                </li>
+<!--                <li>
+                    <a href="{{site.baseurl}}showcase.html">
+                        Showcase
+                    </a>
+                </li>
+-->
+                <li>
+                    <a href="{{site.baseurl}}jogos_digitais.html">
+                        Jogos Digitais
+                    </a>
+                </li>
+                <li>
+                    <a href="{{site.baseurl}}computacao_grafica.html">
+                        CG
+                    </a>
+                </li>
+                <li>
+                    <a href="{{site.baseurl}}materiaisExtras.html">
+                        Extras
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="mobileHide">
+            <a href="{{site.baseurl}}projetos/index.html">
+                Projetos
+            </a>
+        </li>
+<!--        <li class="mobileHide">
+            <a href="{{site.baseurl}}showcase.html">
+                Showcase
+            </a>
+        </li>
+-->
+        <li class="mobileHide">
+            <a href="{{site.baseurl}}jogos_digitais.html">
+                Jogos Digitais
+            </a>
+        </li>
+        <li class="mobileHide">
+            <a href="{{site.baseurl}}computacao_grafica.html">
+                CG
+            </a>
+        </li>
+        <li class="mobileHide">
+            <a href="{{site.baseurl}}materiaisExtras.html">
+                Extras
+            </a>
+        </li>
+        <li class="mobileHide">
+            <a class="pull-right" href="#" id="searchButton">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
 </header>
+<style>
+header ul{
+    display:flex;
+    align-content: flex-start;
+    align-items: center;
+}
+
+
+#mobileHeader{
+    position:absolute;
+    top:50px;
+    padding:1em;
+    display:none;
+    background-color: #ff0000;
+}
+
+#mobileHeader li{ margin:1em 0;}
+
+@media only screen and (min-width: 600px){
+    .mobileShow{
+        display:none;
+    }
+}
+
+</style>
+<script>
+    function toggleMobileMenu(){
+        var menu = document.getElementById("mobileHeader");
+        var computedStyle = window.getComputedStyle(menu).display;
+        menu.style.display = computedStyle === "none" ? "block" : "none";
+    }
+
+</script>

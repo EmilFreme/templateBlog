@@ -1,0 +1,73 @@
+---
+layout: default
+---
+<article>
+<div class="aulaWrapper" style="margin-top:50px">
+<div class="row">
+	<ul class="col-2 indice-aula">
+
+		<li class="indice_type top_nav">
+			<a href="{{site.baseurl}}jogos_digitais.html">
+	        Início
+	    	</a>
+    	</li>
+
+	{% assign without_types = site.jogos_digitais
+		| where: "type", empty		%}
+		{% for post in without_types %}
+		<li class="indice_type top_nav">
+			<a href="{{ post.url }}" title="{{ post.title }}">
+				{{ post.title }}
+			</a>
+		</li>
+		{% endfor %}
+
+		{% assign sort_by_types = site.jogos_digitais
+			| where_exp: "aula", "aula.type"
+			| group_by:"type"
+			%}
+		{% for type in  sort_by_types %}
+		{% if type.name ==  page.type %}
+			{% assign top_nav_status = "opened" %}
+		{% else %}
+			{% assign top_nav_status = "closed" %}
+		{% endif %}
+		<li class="indice_type top_nav {{top_nav_status}}"> {{ type.name | capitalize}}s
+			<ol class="type_list {{top_nav_status}}">
+			{% for post in type.items %}
+				<li>
+					<a href="{{ post.url }}" title="{{ post.title }}">
+						{{ post.title }}
+					</a>
+				</li>
+			{% endfor %}
+			</ol>
+		</li>
+		{% endfor %}
+	</ul>
+	<div class="col-8 aula_content">
+		<div style="margin-top: 1em;">
+		{{ content }}
+		</div>
+</div>
+</div>
+
+</div>
+</article>
+
+<script type="text/javascript" src="/js/centerImage.js"></script>
+<script type="text/javascript">
+	var elements = document.getElementsByClassName("top_nav")
+	for (var i = elements.length - 1; i >= 0; i--) {
+		elements[i].addEventListener("click", toggleList);
+	}
+
+	function toggleList(e) {
+		e.target.classList.toggle("closed");
+		e.target.classList.toggle("opened");
+		var d = e.target.firstElementChild;
+    	d.classList.toggle("closed");
+    	d.classList.toggle("opened");
+	};
+
+</script>
