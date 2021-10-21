@@ -15,6 +15,6 @@ Veja nossos Equipamentos
 Nosso [manual de utilização do
 lab](https://drive.google.com/file/d/15Hf8Oz1SLqoJ1KX4EEgxP1Nj3r_zb954/view?usp=sharing)
 
-Por fim mas não menos importante o
-[Regulamento](https://drive.google.com/file/d/15Hf8Oz1SLqoJ1KX4EEgxP1Nj3r_zb954/view?usp=sharing)
+Por fim, mas não menos importante o
+[Regulamento](https://drive.google.com/file/d/1tjRmLGqicQVcNDy3og0o3WLDD8K3eOot/view?usp=sharing)
 
