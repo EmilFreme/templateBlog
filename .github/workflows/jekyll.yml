@@ -2,7 +2,7 @@ name: Jekyll site CI
 
 on:
   push:
-    branches: [ posting ]
+    branches: [ posting, gDocsAutomation ]
     
   workflow_dispatch:
 
@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - uses: actions/checkout@v2
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
@@ -20,11 +21,10 @@ jobs:
         # aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }} # if you have/need it
         aws-region: us-east-2
 
-    - uses: actions/checkout@v2
     - name: Build the site in the jekyll/builder container
       run: |
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build"
+        jekyll/builder:latest /bin/bash -c "apt update -y && apt install pandoc -y && chmod -R 777 /srv/jekyll && jekyll build"
     - name: "Deploy to AWS"
       run: aws s3 sync ${{ github.workspace }}//_site/ s3://${{ secrets.AWS_S3_BUCKET_NAME }} --acl public-read

@@ -31,3 +31,7 @@ gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
 
 
 gem "webrick", "~> 1.7"
+
+# Dependencias do gdocs2jekyll
+gem "http", "~> 0.5"
+gem 'pandoc-ruby', '~> 2.1', '>= 2.1.4'
