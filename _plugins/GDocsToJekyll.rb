@@ -15,7 +15,7 @@ module Jekyll
       params = {
         :mimeType => "text/html",
         #:mimeType => "application/vnd.openxmlformats-officedocument.wordprocessingml.document", 
-        :key => "AIzaSyCfwBEeerTyv_vTdGcEOiMhuJTBwh9v1Wo"
+        :key => ENV["GOOGLE_DRIVE_API_KEY"]
       }
       res = HTTP.get(gDocsURL, :params => params)
 
