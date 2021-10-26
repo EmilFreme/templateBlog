@@ -27,6 +27,6 @@ jobs:
       run: |
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "apt update -y && apt install pandoc -y && chmod -R 777 /srv/jekyll && jekyll build"
+        jekyll/builder:latest /bin/bash -c "sudo apt update -y && sudo apt install pandoc -y && chmod -R 777 /srv/jekyll && jekyll build"
     - name: "Deploy to AWS"
       run: aws s3 sync ${{ github.workspace }}//_site/ s3://${{ secrets.AWS_S3_BUCKET_NAME }} --acl public-read
