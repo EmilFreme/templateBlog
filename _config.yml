@@ -47,7 +47,7 @@ collections:
     
 paginate: 6
 paginate_path: "/projetos/page:num"
-
+encoding: utf-8
 
 # Exclude from processing.
 # The following items will not be processed, by default.
