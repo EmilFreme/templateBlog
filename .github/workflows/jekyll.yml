@@ -24,7 +24,7 @@ jobs:
     - name: Build the site in the jekyll/builder container
       run: |
         docker run \
-        --env GDOCS_API_KEY=${{ secrets.GOOGLE_DRIVE_API_KEY }} \
+        --env GOOGLE_DRIVE_API_KEY=${{ secrets.GOOGLE_DRIVE_API_KEY }} \
         -v ${{ github.workspace }}:/jekyll_data \
         -v ${{ github.workspace }}/_site:/jekyll_data/_site \
         --entrypoint /bin/bash \
