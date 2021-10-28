@@ -23,10 +23,12 @@ jobs:
 
     - name: Build the site in the jekyll/builder container
       env: 
-        GDRIVE_API_KEY: ${{ secrets.GOOGLE_DRIVE_API_KEY }}
+        GDRIVE_API_KEY: ${{}}
       run: |
         docker run \
-        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build"
+        --env GDOCS_API_KEY=${{ secrets.GOOGLE_DRIVE_API_KEY }} \
+        -v ${{ github.workspace }}:/jekyll_data \
+        -v ${{ github.workspace }}/_site:/jekyll_data/_site \
+        emilfreme/jpb:latest /bin/bash -c "chmod -R 777 /jekyll_data && jekyll build"
     - name: "Deploy to AWS"
       run: aws s3 sync ${{ github.workspace }}//_site/ s3://${{ secrets.AWS_S3_BUCKET_NAME }} --acl public-read
