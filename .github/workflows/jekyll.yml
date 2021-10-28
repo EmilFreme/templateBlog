@@ -28,6 +28,6 @@ jobs:
         -v ${{ github.workspace }}:/jekyll_data \
         -v ${{ github.workspace }}/_site:/jekyll_data/_site \
         --entrypoint /bin/bash \
-        emilfreme/jpb:latest -c "chmod -R 777 /jekyll_data bundler install && jekyll build"
+        emilfreme/jpb:latest -c "chmod -R 777 /jekyll_data && bundler install && jekyll build"
     - name: "Deploy to AWS"
       run: aws s3 sync ${{ github.workspace }}//_site/ s3://${{ secrets.AWS_S3_BUCKET_NAME }} --acl public-read
