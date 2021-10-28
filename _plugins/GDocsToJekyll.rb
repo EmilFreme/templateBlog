@@ -3,15 +3,15 @@ require 'pandoc-ruby'
 module Jekyll
   class GDocsToJekyll < Liquid::Tag
 
-    def initialize(tag_name, text, token)
+    def initialize(tag_name, doc_id, token)
       super
-      @text = text
+      @docId = doc_id
     end
 
     def render(context)
       
-      docId = "18hCINmANE-BKmRCjQJ5E5JndzH0tX3wSecyaUmysCHY"
-      gDocsURL = "https://www.googleapis.com/drive/v3/files/#{docId}/export"
+      #docId = @doc_id #"18hCINmANE-BKmRCjQJ5E5JndzH0tX3wSecyaUmysCHY"
+      gDocsURL = "https://www.googleapis.com/drive/v3/files/#{@docId}/export"
       params = {
         :mimeType => "text/html",
         #:mimeType => "application/vnd.openxmlformats-officedocument.wordprocessingml.document", 
@@ -21,8 +21,8 @@ module Jekyll
 
 
       if res.code == 200
-
-        mddoc = PandocRuby.new("#{res.body}", from: :html, to: :markdown_mmd)
+        resBody = res.body.dup 
+        mddoc = PandocRuby.new("#{resBody}", from: :html, to: :markdown_mmd)
         "#{mddoc}"
       else
         "FUCK #{res.body}"
