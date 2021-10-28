@@ -22,8 +22,6 @@ jobs:
         aws-region: us-east-2
 
     - name: Build the site in the jekyll/builder container
-      env: 
-        GDRIVE_API_KEY: ${{}}
       run: |
         docker run \
         --env GDOCS_API_KEY=${{ secrets.GOOGLE_DRIVE_API_KEY }} \
