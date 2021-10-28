@@ -10,7 +10,7 @@ itemOrder: "0"
 type: "Handout"
 ---
 
-{% gdocs2jekyll  18hCINmANE-BKmRCjQJ5E5JndzH0tX3wSecyaUmysCHY %}
+{% gdocs2jekyll 18hCINmANE-BKmRCjQJ5E5JndzH0tX3wSecyaUmysCHY %}
 
 
 
