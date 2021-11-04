@@ -1,11 +1,11 @@
 ---
 layout: classContent
-title: "Aula 16: Ray Tracing A"
+title: "Aula 16: Ray Tracing Parte 1"
 course: "Computação Gráfica"
 sectionNo: 0
 section: "RayTracing"
 lectureOrder: "0"
-lecture: "Ray Tracing A"
+lecture: "Ray Tracing Parte 1"
 itemOrder: "0"
 type: "Slides"
 ---
