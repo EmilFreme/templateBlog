@@ -1,5 +1,6 @@
 require 'http'
 require 'pandoc-ruby'
+require 'cgi'
 module Jekyll
   class GDocsToJekyll < Liquid::Tag
 
@@ -22,7 +23,7 @@ module Jekyll
 
       if res.code == 200
         resBody = res.body.dup 
-        mddoc = PandocRuby.new("#{resBody}", from: :html, to: :markdown_mmd)
+        mddoc = PandocRuby.convert("#{resBody}", from: :html, to: :markdown_mmd).force_encoding("UTF-8")
         "#{mddoc}"
       else
         "FUCK #{res.body}"
