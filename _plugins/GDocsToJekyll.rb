@@ -26,20 +26,20 @@ module Jekyll
         resBody = res.body.dup 
         parsedHTML = Nokogiri::HTML5(resBody)
 
-        for node in parsed.css("span")
+        for node in parsedHTML.css("span")
           if(node["style"])
             styleCheck = node["style"]
             # TW: 900 FS:22  H1
             if (styleCheck.include? "font-weight:900" and \
                 styleCheck.include? "font-size:22")
               node.delete("style")
-              newNode = parsed.create_element("h1")
+              newNode = parsedHTML.create_element("h1")
               newNode.inner_html = node.inner_html
               node.replace(newNode)
               # TW:700 b
             elsif (styleCheck.include? "font-weight:700")
               node.delete("style")
-              newNode = parsed.create_element("b")
+              newNode = parsedHTML.create_element("b")
               newNode.inner_html = node.inner_html
               node.replace(newNode)
               # TW: 400 FS 12  Basetext
@@ -50,7 +50,7 @@ module Jekyll
           end
         end
 
-        for node in parsed.css("*")
+        for node in parsedHTML.css("*")
           node.delete("style")
         end
 
