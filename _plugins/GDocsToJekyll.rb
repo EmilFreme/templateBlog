@@ -52,12 +52,13 @@ module Jekyll
 
         for node in parsed.css("*")
           node.delete("style")
-
-          mddoc = PandocRuby.convert("#{parsedHTML.to_html}", from: :html, to: :markdown_mmd).force_encoding("UTF-8")
-          "#{mddoc}"
-        else
-          "FUCK #{res.body}"
         end
+
+        mddoc = PandocRuby.convert("#{parsedHTML.to_html}", from: :html, to: :markdown_mmd).force_encoding("UTF-8")
+        "#{mddoc}"
+      else
+        "FUCK #{res.body}"
+      end
 
 
       end
