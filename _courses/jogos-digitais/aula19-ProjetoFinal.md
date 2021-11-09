@@ -3,7 +3,7 @@ layout: classContent
 title: "Missão Final"
 course: "Jogos Digitais"
 sectionNo: 5
-section: "Missão Final"
+section: "Boss Final"
 lectureOrder: "19"
 lecture: "Aula 19: Missão Final"
 itemOrder: "0"
