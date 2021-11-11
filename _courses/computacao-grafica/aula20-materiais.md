@@ -1,11 +1,11 @@
 ---
 layout: classContent
-title: "Aula 19: Geometrias"
+title: "Aula 20: Materiais"
 course: "Computação Gráfica"
 sectionNo: 0
 section: "RayTracing"
-lectureOrder: "3"
-lecture: "Geometrias"
+lectureOrder: "4"
+lecture: "Materiais"
 itemOrder: "0"
 type: "Slides"
 ---
