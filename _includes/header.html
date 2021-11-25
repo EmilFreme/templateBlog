@@ -1,8 +1,15 @@
 <header>
     <ul>
+    {% if page.layout == "classContent" %}
+        <li>
+            <button id="courseNav__toggle">
+                <i class="fa fa-bars"></i>
+            </button>
+        </li>
+    {% endif %}
         <li>
             <a href="{{site.baseurl}}index.html" class=link__bolder>
-                RV & Jogos | Insper
+                RV & Jogos | Insper 
             </a>
         </li>
         <li class="mobileShow">
