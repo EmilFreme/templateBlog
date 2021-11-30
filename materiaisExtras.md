@@ -1,7 +1,7 @@
 ---
 title: Materiais Extras
 course: "Materiais Extras"
-coursePath: "_extras"
+coursepath: "_extras"
 layout: classContent
 ---
 
