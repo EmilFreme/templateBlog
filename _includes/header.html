@@ -39,26 +39,40 @@
 </header>
 
 <script type="text/javascript">
-    function mobileMenu(){
+    let xOffset;
+    let yOffset;
+
+    function calculateOffset(){
         let menu = document.getElementsByClassName("courses")[0];
-        menu.style.display = "block"
+        menu.style.display = "block";
         let menubbox = menu.getBoundingClientRect();
-        menu.style.display = "none"
-        let xOffset = -menubbox.x;
-        let yOffset = -(menubbox.bottom - menubbox.y)-50;
-        menu.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
+        
+        xOffset = -menubbox.x;
+        yOffset = - (menubbox.bottom - menubbox.y) - 50;
+    }
+
+    calculateOffset()
+
+    function positionMenu(){
+        let menu = document.getElementsByClassName("courses")[0];
+        xoffset = 0;
+        yoffset = 0;
+        if(window.innerWidth <= 700){
+            xoffset = xOffset;
+            yoffset = yOffset;
+        }
+        menu.style.transform = `translate(${xoffset}px, ${yoffset}px)`;
     }
 
     function toggleCourseMenu(){
         let menu = document.getElementsByClassName("courses")[0];
         let computedStyle = getComputedStyle(menu).display
-        menu.style.display = computedStyle == "none" ? "block" : "none";
+        if(computedStyle == "none"){
+            menu.style.display = "block";
+            positionMenu();
+        }
+        else{
+            menu.style.display = "none";
+        }
     }
-
-    
-
-    if(window.innerWidth <= 700) mobileMenu();
-    window.addEventListener("resize", function(){
-        if(window.innerWidth <= 700) mobileMenu();
-    });
 </script>
