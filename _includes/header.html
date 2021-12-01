@@ -3,13 +3,13 @@
         {% if page.layout == "classContent" %}
         <li>
             <button id="courseNav__toggle">
-                <i class="fa fa-bars"></i>
+                <i class="fa fa-bars">&#9776;</i>
             </button>
         </li>
         {% endif %}
         <li>
             <a href="{{site.baseurl}}index.html" class=link__bolder>
-                RV & Jogos | Insper 
+                RV & Jogos
             </a>
         </li>
         <li>
@@ -18,7 +18,7 @@
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="#" onClick="toggleCourseMenu()">
                 Cursos
             </a>
             <ul class="courses">
@@ -41,17 +41,24 @@
 <script type="text/javascript">
     function mobileMenu(){
         let menu = document.getElementsByClassName("courses")[0];
+        menu.style.display = "block"
         let menubbox = menu.getBoundingClientRect();
+        menu.style.display = "none"
         let xOffset = -menubbox.x;
         let yOffset = -(menubbox.bottom - menubbox.y)-50;
         menu.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
     }
 
+    function toggleCourseMenu(){
+        let menu = document.getElementsByClassName("courses")[0];
+        let computedStyle = getComputedStyle(menu).display
+        menu.style.display = computedStyle == "none" ? "block" : "none";
+    }
+
+    
+
     if(window.innerWidth <= 700) mobileMenu();
     window.addEventListener("resize", function(){
         if(window.innerWidth <= 700) mobileMenu();
     });
-
-    
-
 </script>
