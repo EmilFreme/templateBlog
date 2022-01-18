@@ -21,7 +21,7 @@
             <a href="#" onClick="toggleCourseMenu()">
                 Cursos
             </a>
-            <ul class="courses">
+            <ul class="courses" style="display:none;">
             {% assign courses = site.pages |
             where_exp: "page", "page.coursepath" %}
 
@@ -44,11 +44,13 @@
 
     function calculateOffset(){
         let menu = document.getElementsByClassName("courses")[0];
+        let previousState = menu.style.display;
         menu.style.display = "block";
         let menubbox = menu.getBoundingClientRect();
         
         xOffset = -menubbox.x;
         yOffset = - (menubbox.bottom - menubbox.y) - 50;
+        menu.style.display = previousState;
     }
 
     calculateOffset()
