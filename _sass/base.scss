@@ -1,5 +1,14 @@
-@import "colors";
-@import "textformat";
+@import "basecolors";
+@import "basetext";
+@import "classContent";
+@import "projects";
+
+
+/* COMMON SPACING */
+$basicPadding: 1ch;
+$courseNavSize: 25vw;
+
+/* END COMMON SPACING */
 
 html{background:$cinza;}
 
@@ -7,29 +16,24 @@ body{
     background-color: $branco;
     font-family: $base-font;
     font-weight: $regular-face;
-}
+    transition: 1.5s;
 
-ol{
-	margin:1em;
-	list-style-type: decimal;
-	li{
-		margin:0.2em;
-	}
+    &.open{
+        padding-left:$courseNavSize;
+    }
+
 }
 
 a{
 	text-decoration:none;
 	color: $vinho;
 	transition:1s;
-}
+    margin:1ch;
 
-header a:hover{
-	color:$ciano;
-}
-
-a:hover{
-	color:$vinho;
-	text-shadow: 0 0 1px #FF0000, 0 0 2px #0000FF;
+    &:hover{
+    	color:$vinho;
+    	text-shadow: 0 0 1px #FF0000, 0 0 2px #0000FF;
+    }
 }
 
 iframe {
@@ -41,44 +45,74 @@ iframe {
 }
 
 header{
-    position: fixed;
+    position: sticky;
     display: flex;
 	align-items:center;
     top:0;
     left: 0;;
     width:100%;
-    height:50px;
-    padding: 5px, 0;
+    height:3.5em;
+    padding: $basicPadding;
     color: $branco;
     background-color: $vermelho;
+    font-size: 1.5em;
+    box-sizing: border-box;
+
+    @media screen and (max-width:700px){
+        position:fixed;
+        bottom:0;
+        top:inherit;
+    }
+
+    &.open{
+        transform: translate($courseNavSize, 0);
+    }
 
     a{
-        font-size: 20px;
         color: $branco;
         text-decoration: none;
-        margin:10px;
 
         &:hover{
             text-decoration: underline;
+            color: $cinza50;
         }
     }
 
-}
+    button{
+        background:none;
+        border:none;
+        color: $branco;
+        font-size:1.2em;
+        transition: 1s;
 
-table{
-	margin:1em;
-}
+        &:hover{
+            background:$cinza50;
+        }
+    }
+    ul{
+        display:flex;
+        align-content: flex-start;
+        align-items: center;
 
-th{
-	font-weight: $bolder-face;
-	padding:1em;
-	border: solid 1px $preto;
-	vertical-align: middle;
-}
+        &.courses{
+            position:fixed;
+            background:$vermelho;
+            flex-direction: column;
+            align-items:flex-start;
+            padding:0.3em;
+            display: none;
 
-td{
-	padding: 1em;
-	border: solid 1px $preto;
+
+            @media screen and (max-width:700px){
+                width:100%;
+            }
+
+            li{
+                margin:0.5em 1em;
+            }
+        }
+    }
+
 }
 
 footer{
@@ -87,11 +121,18 @@ footer{
     padding:8px;
 	color:$branco;
 	text-align:center;
-	a{color:$branco;}
+	
+    a{
+        color:$branco;
+    }
 }
 
-.centered{text-align:center;}
-//div{border: 1px solid red; margin: -1px;}
+
+/* HELPERS */
+
+.centered{
+    text-align:center;
+}
 
 .link__bolder{
     font-weight: $bold-face;
@@ -117,31 +158,33 @@ footer{
 
 }
 
-.col-1{ width: 10%; @media screen and (max-width: 700px){
+/* CSS FRAMEWORKS */
+
+.col-1{ width: calc(10%); @media screen and (max-width: 700px){
+    width:50%;
+}}
+.col-2{ width: calc(20%); @media screen and (max-width: 700px){
 	width:50%;
 }}
-.col-2{ width: 20%; @media screen and (max-width: 700px){
+.col-3{ width: calc(30%); @media screen and (max-width: 700px){
 	width:50%;
 }}
-.col-3{ width: 30%; @media screen and (max-width: 700px){
+.col-4{ width: calc(40%); @media screen and (max-width: 700px){
 	width:50%;
 }}
-.col-4{ width: 40%; @media screen and (max-width: 700px){
+.col-5{ width: calc(50% - 4ch); @media screen and (max-width: 700px){
 	width:50%;
 }}
-.col-5{ width: 50%; @media screen and (max-width: 700px){
-	width:50%;
-}}
-.col-6{ width: 60%; @media screen and (max-width: 700px){
+.col-6{ width: calc(60%); @media screen and (max-width: 700px){
 	width:100%;
 }}
-.col-7{ width: 70%; @media screen and (max-width: 700px){
+.col-7{ width: calc(70%); @media screen and (max-width: 700px){
 	width:100%;
 }}
-.col-8{ width: 80%; @media screen and (max-width: 700px){
+.col-8{ width: calc(80%); @media screen and (max-width: 700px){
 	width:100%;
 }}
-.col-9{ width: 90%; @media screen and (max-width: 700px){
+.col-9{ width: calc(90%); @media screen and (max-width: 700px){
 	width:100%;
 }}
 .col-10{ width: 100%}
@@ -151,123 +194,6 @@ footer{
 	flex-wrap:wrap;
 }
 
-.principal{
-	display:flex;
-	flex-wrap:wrap;
-	min-height: 91vh;
-}
-
-.article-card{
-	padding:10px;
-	cursor:pointer;
-}
-
-.article-card__text{
-	min-height:50px;;
-	padding:2pt;
-	overflow:hidden;
-	color:$preto;
-}
-
-.article-card__title{
-	.title--text{
-			background-color:$cinza;
-			color:$branco;
-			width:100%;
-			min-height:50px;
-			padding-left:10px;
-			display: flex;
-    		flex-flow: column;
-		flex-direction: row;
-    		justify-content: flex-start;
-		align-items:baseline;
-		p{padding:0.2em;}
-	}
-			.article-title{
-				font-size: 14pt;
-				font-weight: $bold-face;
-				border-bottom: 1px solid $branco;
-
-				height: 2.5em;
-				overflow: hidden;
-			}
-
-			.article-info{
-				font-size:10pt;
-				font-weight: $regular-face;
-				overflow: hidden;
-
-				span{
-					white-space: nowrap;
-					overflow:hidden
-				}
-			}
-}
-
-.first-row .article-card{
-	.article-card__title{
-		min-height:75px;
-		display: flex;
-		align-items:flex-end;
-		background-color:$aqua;
-
-		.title--text{
-			background-color:$vinho;
-
-			.article-title{
-				font-size: 20pt;
-			}
-
-			.article-info{
-				font-size:12pt;
-				font-weight: $thin-face;
-			}
-		}
-
-
-	}
-
-}
-
-
-.post_header{
-		//height:250px;
-		margin-top:50px;
-		width:100%;
-		background-color:$aqua;
-		display:flex;
-		flex-direction:column-reverse;
-}
-
-
-
-.post_header--content{
-		//background-color: $vinho;
-		height:100px;
-		width:100%;
-		display:flex;
-		flex-direction:column-reverse;
-		justify-content:center;
-		padding-left:20px;
-		color:$branco;
-
-		h1{
-			font-size:25px;
-			max-width:960px;
-			width:100%;
-			margin:0 auto;
-			font-weight:$bolder-face;
-			border-bottom:1px solid $branco;
-	}
-		h2{
-			padding-top:5px;
-			max-width:960px;
-			width:100%;
-			margin:0 auto;
-			text-align:right;
-	}
-
-}
 
 .aula_content {
 	padding-left:2em !important;
@@ -382,7 +308,7 @@ footer{
 }
 
 
-#searchOverlay{
+/* #searchOverlay{
 		position:fixed;
 		background-color: rgba(65, 64, 66, 0.9);
 		top:50px;
@@ -433,7 +359,7 @@ footer{
 			font-weight:$thin-face;
 			min-height:1.1em;
 		}
-		}
+		}*/
 
 #relatedPosts{
 		background-color:$cinza;

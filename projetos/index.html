@@ -29,14 +29,15 @@ layout: default
 
     <div class="row first-row">
         {% for post in paginator.posts %}
-        <a href="{{ post.url }}" class="article-card col-10" title="{{post.title}}">
+        <a href="{{ post.url }}" class="article-card col-5" title="{{post.title}}">
             <div class="article-card__title">
-                <div class="title--text">
+                <div class="title--bg">
                     <p class="article-title">
                     {{ post.title }}
                     </p>
                     <p class="article-info">
                     {{ post.date | date_to_string }} <br>
+                    {% comment %}
                     &nbsp;<!--<span>Tags: {% for tag in
                     post.tags %}
                     {%  if tag == post.tags.last %}
@@ -45,6 +46,7 @@ layout: default
                     {{ tag }},
                     {% endif %}
                     {% endfor %} </span>-->
+                    {% endcomment %}
                     </p>
                 </div>
             </div>

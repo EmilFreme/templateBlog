@@ -10,4 +10,5 @@ itemOrder: "3"
 type: "Handout"
 ---
 
-<iframe src="https://docs.google.com/document/d/e/2PACX-1vTvAwLncHuZEO6iR8eUjH_L1FVvtateMk7RJ1QI8S1v90Ldjw4TtN6hsUyBFr1puO377NBGTO9HEZhA/pub?embedded=true"></iframe>
+{% gdocs2jekyll 1jNConjqEhkroVuErFCdVHGekdJKceyB4vg1MCY8ZfLI %}
+

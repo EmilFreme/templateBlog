@@ -46,7 +46,7 @@ collections:
     sort_by: aula
     output: true
     
-paginate: 6
+paginate: 20
 paginate_path: "/projetos/page:num"
 encoding: utf-8
 
