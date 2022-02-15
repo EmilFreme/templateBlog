@@ -1,9 +1,9 @@
 ---
 layout: classContent
 title: "Experiência RV"
-course: "Jogos Digitais"
+course: "Realidade Virtual"
 sectionNo: 0
-section: ""
+section: "Experiência RV"
 lectureOrder: 1
 lecture: "Aula 01: Experiência RV"
 itemOrder: 0
