@@ -1,6 +1,6 @@
 ---
 layout: classContent
-title: "Breakout: Parte 01"
+title: "Tutorial Breakout: Parte 01"
 course: "Jogos Digitais"
 sectionNo: 0
 section: "Preludio: Breakout"

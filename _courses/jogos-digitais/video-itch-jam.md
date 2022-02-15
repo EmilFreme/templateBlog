@@ -1,6 +1,6 @@
 ---
 layout: classContent
-title: "Itch.io: Enviando para Jam"
+title: "Vídeo Itch.io: Enviando para Jam"
 course: "Jogos Digitais"
 sectionNo: 0
 section: "Preludio: Breakout"

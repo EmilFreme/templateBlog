@@ -1,6 +1,6 @@
 ---
 layout: classContent
-title: "Git e Unity"
+title: "Tutorial Git e Unity"
 course: "Jogos Digitais"
 sectionNo: 0
 section: "Preludio: Breakout"

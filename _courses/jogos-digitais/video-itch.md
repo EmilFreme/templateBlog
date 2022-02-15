@@ -1,6 +1,6 @@
 ---
 layout: classContent
-title: "Itch.io"
+title: "Vídeo Itch.io"
 course: "Jogos Digitais"
 sectionNo: 0
 section: "Preludio: Breakout"
