@@ -5,7 +5,7 @@ course: "Realidade Virtual"
 sectionNo: 1
 section: "Experiência RV"
 lectureOrder: "0"
-lecture: "Aula01: Colocando para funcionar o HTC Vive"
+lecture: "Aula 01: Experiência RV"
 itemOrder: "1"
 type: "Tutorial"
 ---
