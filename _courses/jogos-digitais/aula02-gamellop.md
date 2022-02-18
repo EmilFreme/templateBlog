@@ -11,3 +11,5 @@ type: "Slides"
 ---
 
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQspSgWXBTz2qUSF0R2mCKxIZySw1RuzXypYCAb3BdoXTKJSwXoqaBI3BVcKDMWSNrAj8jakyl5Ym01/embed?start=false&loop=false&delayms=60000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+## &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Acesse o documento: [GoogleDocs](https://docs.google.com/presentation/d/1xpmjR78XbNPvtVq3reZV1BQPStDrrQdCaUOm_r68L7A/preview?rm=minimal&usp=sharing)
