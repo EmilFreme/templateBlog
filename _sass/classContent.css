@@ -175,5 +175,13 @@ header{position:relative;}
     img{
         max-width:60ch;
     }
+    table{
+        border-collapse: initial;
+        border: solid;
+        padding: 1em;
+        font-family: monospace;
+        margin: 1em;
+        line-height: 1.5;
+    }
 }
 
