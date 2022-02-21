@@ -172,7 +172,7 @@ header{position:relative;}
     padding:1em;
     max-width:120ch;
 
-    .img{
+    img{
         max-width:60ch;
     }
 }
