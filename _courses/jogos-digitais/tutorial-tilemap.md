@@ -1,11 +1,11 @@
 ---
 layout: classContent
-title: "Tutorial Breakout: Parte 02"
+title: "Tutorial Tilemap: Cenário"
 course: "Jogos Digitais"
 sectionNo: 0
-section: "Preludio: Breakout"
+section: "Universo 2D"
 lectureOrder: 1
-lecture: "Aula 02: Game Loop, Game Manager e Interfaces"
+lecture: "Aula 03: Game Design Frameworks"
 itemOrder: 1
 type: "Tutorial"
 ---
