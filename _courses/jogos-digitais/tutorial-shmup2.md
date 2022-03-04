@@ -1,6 +1,6 @@
 ---
 layout: classContent
-title: "Tutorial Shmup: Parte 03"
+title: "Tutorial Shmup: Parte 02"
 course: "Jogos Digitais"
 sectionNo: 0
 section: "Universo 2D"
