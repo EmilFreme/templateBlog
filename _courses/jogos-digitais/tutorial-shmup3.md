@@ -10,6 +10,6 @@ itemOrder: 4
 type: "Tutorial"
 ---
 
-# &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Faça a atividade no: [GoogleDocs](https://docs.google.com/document/d/1GOOjy-kSvQ5khwqXmO42iVgUey2hQZuUIjedpqWiL2Q/copy?usp=sharing&ouid=116972197927145487361&rtpof=true&sd=true) / [PDF](https://docs.google.com/document/d/1GOOjy-kSvQ5khwqXmO42iVgUey2hQZuUIjedpqWiL2Q/export?format=pdf&usp=sharing&ouid=116972197927145487361&rtpof=true&sd=true)
+# &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Faça a atividade no: [GoogleDocs](https://docs.google.com/document/d/1Au7gsh1OBzAtaGdJJMq6nsZuW5dHF2TV3mKz1dADCJc/copy?usp=sharing&ouid=116972197927145487361&rtpof=true&sd=true) / [PDF](https://docs.google.com/document/d/1Au7gsh1OBzAtaGdJJMq6nsZuW5dHF2TV3mKz1dADCJc/export?format=pdf&usp=sharing&ouid=116972197927145487361&rtpof=true&sd=true)
 
-<iframe src="https://docs.google.com/document/d/e/2PACX-1vRxbA6XRQbhEHBU-DSlO0z9bM532H9LAgql2oTSHHd_4Gur_qbeNYyipYKzWG_BjGDl304GS89TXpIS/pub?embedded=true"></iframe>
+<iframe src="https://docs.google.com/document/d/e/2PACX-1vQkAeiRm68LWCEndcCPPv7MM6xb-OuLRJrmcLVT-FBxIEy3Vt_iKu615fimk75Hr4BLeU7BKVtwYv4v/pub?embedded=true"></iframe>
