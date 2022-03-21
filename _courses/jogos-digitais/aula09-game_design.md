@@ -5,7 +5,7 @@ course: "Jogos Digitais"
 sectionNo: 0
 section: "Universo 2D"
 lectureOrder: 9
-lecture: "Aula 08: Game Design"
+lecture: "Aula 09: Game Design"
 itemOrder: 0
 type: "Slides"
 ---
