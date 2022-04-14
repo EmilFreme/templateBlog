@@ -2,7 +2,7 @@
 layout: classContent
 title: "Atividade: AltspaceVR"
 course: "Realidade Virtual"
-sectionNo: 1
+sectionNo: 2
 section: "Multiverso"
 lectureOrder: 9
 lecture: "Aula 09: Multiverso"

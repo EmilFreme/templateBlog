@@ -2,7 +2,7 @@
 layout: classContent
 title: "Multiverso"
 course: "Realidade Virtual"
-sectionNo: 0
+sectionNo: 2
 section: "Multiverso"
 lectureOrder: 9
 lecture: "Aula 09: Multiverso"
