@@ -3,9 +3,9 @@ layout: classContent
 title: "Atividade: AltspaceVR"
 course: "Realidade Virtual"
 sectionNo: 2
-section: "Multiverso"
+section: "Metaverso"
 lectureOrder: 9
-lecture: "Aula 09: Multiverso"
+lecture: "Aula 09: Metaverso"
 itemOrder: 1
 type: "Tutorial"
 ---

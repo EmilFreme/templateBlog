@@ -1,11 +1,11 @@
 ---
 layout: classContent
-title: "Multiverso"
+title: "Metaverso"
 course: "Realidade Virtual"
 sectionNo: 2
-section: "Multiverso"
+section: "Metaverso"
 lectureOrder: 9
-lecture: "Aula 09: Multiverso"
+lecture: "Aula 09: Metaverso"
 itemOrder: 0
 type: "Slides"
 ---
