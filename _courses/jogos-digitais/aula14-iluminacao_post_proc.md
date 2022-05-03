@@ -1,6 +1,6 @@
 ---
 layout: classContent
-title: " Iluminação e post-processing"
+title: "Iluminação e post-processing"
 course: "Jogos Digitais"
 sectionNo: 0
 section: "Universo 3D"
