@@ -11,59 +11,69 @@ module Jekyll
     end
 
     def render(context)
-#      puts "|#{@docId}|".red
-#      @docId = "18hCINmANE-BKmRCjQJ5E5JndzH0tX3wSecyaUmysCHY"
-      gDocsURL = "https://www.googleapis.com/drive/v3/files/#{@docId}/export"
-      params = {
-        :mimeType => "text/html",
-        #:mimeType => "application/vnd.openxmlformats-officedocument.wordprocessingml.document", 
-        :key => ENV["GOOGLE_DRIVE_API_KEY"]
-      }
-      res = HTTP.get(gDocsURL, :params => params)
+      #gDocsURL = "https://www.googleapis.com/drive/v3/files/#{@docId}/export"
+      #params = {
+      #  :mimeType => "text/html",
+      #  :key => ENV["GOOGLE_DRIVE_API_KEY"]
+      #}
+      #res = HTTP.get(gDocsURL, :params => params)
+      leurl = "https://www.googleapis.com/drive/v3/files/1mVJd7dUblghCx7bWHx_VI9MLV6KiZnFIbM7reClv49E/export?mimeType=text/html&key=AIzaSyDbghQ9XYfvuzx0H-535ipfCjGHaWQxqWc"
 
+      res = HTTP.get(leurl)
 
-      if res.code == 200
-        resBody = res.body.dup 
-        parsedHTML = Nokogiri::HTML5(resBody)
+      if res.code != 200
+        "#{res.to_s()}"
+        return
+      end
 
-        for node in parsedHTML.css("span")
-          if(node["style"])
-            styleCheck = node["style"]
-            # TW: 900 FS:22  H1
-            if (styleCheck.include? "font-weight:900" and \
-                styleCheck.include? "font-size:22")
-              node.delete("style")
-              newNode = parsedHTML.create_element("h1")
-              newNode.inner_html = node.inner_html
-              node.replace(newNode)
-              # TW:700 b
-            elsif (styleCheck.include? "font-weight:700")
-              node.delete("style")
-              newNode = parsedHTML.create_element("b")
-              newNode.inner_html = node.inner_html
-              node.replace(newNode)
-              # TW: 400 FS 12  Basetext
-            elsif( styleCheck.include? "font-weight:400" and \
-                  styleCheck.include? "font-size:12")
-              node.delete("style")
-            end
+      resBody = res.body.to_s()
+      parsedHTML = Nokogiri::HTML5(resBody)
+
+      parsedHTML.search("*").each do |node|
+        if node.name == "span" and node["style"]
+          if node["style"].include? "font-style:italic"
+            semantic_swap(parsedHTML, node, "i")
+          elsif node["style"].include? "font-weight:700"
+            semantic_swap(parsedHTML, node, "b")
           end
         end
 
-        for node in parsedHTML.css("*")
-          node.delete("style")
+        if not ["img", "a"].include? node.name
+          node.keys.each do |attr|
+            node.delete(attr)
+          end
         end
 
-        mddoc = PandocRuby.convert("#{parsedHTML.to_html}", from: :html, to: :markdown_mmd).force_encoding("UTF-8")
-        "#{mddoc}"
-      else
-        "FUCK #{res.body}"
+        if node.name == "a" and not node["href"]
+          parsedHTML.delete(node)
+        end
+
+        if(node.name == "span")
+          unwrap(node)
+        end
       end
 
+        mddoc = PandocRuby.convert("#{parsedHTML.to_html}",
+                                   from: :html,
+                                   to: :markdown_mmd)
+                          .force_encoding("UTF-8")
 
+        "#{mddoc}"
+    end
+
+    def semantic_swap(doc, node, semantic_tag)
+      semantic_node = doc.create_element(semantic_tag)
+      semantic_node.inner_html = node.inner_html
+      node.replace(semantic_node)
+    end
+
+    def unwrap(node)
+      if node.parent
+        node.replace(node.inner_html)
       end
     end
 
   end
+end
 
-  Liquid::Template.register_tag('gdocs2jekyll', Jekyll::GDocsToJekyll)
+Liquid::Template.register_tag('gdocs2jekyll', Jekyll::GDocsToJekyll)
