@@ -3,7 +3,7 @@ layout: classContent
 title: "Apresentação da Disciplina"
 course: "Jogos Digitais"
 sectionNo: 0
-section: "Preludio"
+section: "Preludio: Breakout"
 lectureOrder: 1
 lecture: "Aula 01: Apresentação da Disciplina"
 itemOrder: 0
