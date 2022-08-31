@@ -1,0 +1,96 @@
+@import "basecolors";
+@import "basetext";
+
+//TODO: Remover essa dependência
+$basicPadding: 1ch;
+$courseNavSize: 25vw;
+
+header::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 40vh;
+    background-image: linear-gradient($vermelho 30%,
+        scale-color($vermelho, $lightness:+10%) 100%);
+    transform: skewY(-2deg);
+    z-index:-1;
+}
+
+header{
+    position: sticky;
+    display: flex;
+	align-items:center;
+    top:0;
+    left: 0;
+    width:100%;
+    height:3.5em;
+    padding: $basicPadding;
+    color: $branco;
+    background-color: $vermelho;
+    font-size: 1.5em;
+    box-sizing: border-box;
+
+    //TODO: Rever a melhor forma de fazer isso
+    @media screen and (max-width:700px){
+        position:fixed;
+        bottom:0;
+        top:inherit;
+    }
+
+    //TODO: Rever uso do hamburger menu em telas grandes
+    &.open{
+        transform: translate($courseNavSize, 0);
+    }
+
+    a{
+        color: $branco;
+        text-decoration: none;
+
+        &:hover{
+            text-decoration: underline;
+            color: $cinza50;
+        }
+    }
+
+    li{
+        list-style:none;
+    }
+
+    button{
+        background:none;
+        border:none;
+        color: $branco;
+        font-size:1.2em;
+        transition: 1s;
+
+        &:hover{
+            background:$cinza50;
+        }
+    }
+    ul{
+        display:flex;
+        align-content: flex-start;
+        align-items: center;
+
+        &.courses{
+            position:fixed;
+            background:scale-color($vermelho, $lightness:-10%);
+            flex-direction: column;
+            align-items:flex-start;
+            padding:0.3em;
+            display: none;
+
+
+            @media screen and (max-width:700px){
+                width:100%;
+            }
+
+            li{
+                margin:0.5em 1em;
+            }
+        }
+    }
+
+}

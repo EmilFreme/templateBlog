@@ -2,6 +2,7 @@
 @import "basetext";
 @import "classContent";
 @import "projects";
+@import "header";
 
 
 /* COMMON SPACING */
@@ -13,7 +14,6 @@ $courseNavSize: 25vw;
 html{background:$cinza;}
 
 body{
-    background-color: $branco;
     font-family: $base-font;
     font-weight: $regular-face;
     transition: 1.5s;
@@ -44,76 +44,8 @@ iframe {
 	
 }
 
-header{
-    position: sticky;
-    display: flex;
-	align-items:center;
-    top:0;
-    left: 0;;
-    width:100%;
-    height:3.5em;
-    padding: $basicPadding;
-    color: $branco;
-    background-color: $vermelho;
-    font-size: 1.5em;
-    box-sizing: border-box;
-
-    @media screen and (max-width:700px){
-        position:fixed;
-        bottom:0;
-        top:inherit;
-    }
-
-    &.open{
-        transform: translate($courseNavSize, 0);
-    }
-
-    a{
-        color: $branco;
-        text-decoration: none;
-
-        &:hover{
-            text-decoration: underline;
-            color: $cinza50;
-        }
-    }
-
-    button{
-        background:none;
-        border:none;
-        color: $branco;
-        font-size:1.2em;
-        transition: 1s;
-
-        &:hover{
-            background:$cinza50;
-        }
-    }
-    ul{
-        display:flex;
-        align-content: flex-start;
-        align-items: center;
-
-        &.courses{
-            position:fixed;
-            background:$vermelho;
-            flex-direction: column;
-            align-items:flex-start;
-            padding:0.3em;
-            display: none;
 
 
-            @media screen and (max-width:700px){
-                width:100%;
-            }
-
-            li{
-                margin:0.5em 1em;
-            }
-        }
-    }
-
-}
 
 footer{
     width:100%;
