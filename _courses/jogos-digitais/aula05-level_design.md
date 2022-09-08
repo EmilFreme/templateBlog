@@ -5,7 +5,7 @@ course: "Jogos Digitais"
 sectionNo: 1
 section: "Projeto 1"
 lectureOrder: 1
-lecture: "Aula 04: Level Design 101"
+lecture: "Aula 05: Level Design 101"
 itemOrder: 0
 type: "Slides"
 ---
