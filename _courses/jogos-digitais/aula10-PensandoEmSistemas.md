@@ -4,7 +4,7 @@ title: "Pensando em Sistemas"
 course: "Jogos Digitais"
 sectionNo: 2
 section: "Projeto 2"
-lectureOrder: 0
+lectureOrder: 6
 lecture: "Aula 10: Pensando em Sistemas"
 itemOrder: 0
 type: "Slides"

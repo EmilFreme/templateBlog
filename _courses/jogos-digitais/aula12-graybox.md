@@ -4,7 +4,7 @@ title: "Graybox"
 course: "Jogos Digitais"
 sectionNo: 2
 section: "Projeto 2"
-lectureOrder: 0
+lectureOrder: 8
 lecture: "Aula 12: Graybox"
 itemOrder: 0
 type: "Slides"

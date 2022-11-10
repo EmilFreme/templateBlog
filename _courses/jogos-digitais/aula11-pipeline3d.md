@@ -4,7 +4,7 @@ title: "Pipeline 3D"
 course: "Jogos Digitais"
 sectionNo: 2
 section: "Projeto 2"
-lectureOrder: 0
+lectureOrder: 7
 lecture: "Aula 11: Pipeline 3D"
 itemOrder: 0
 type: "Slides"
