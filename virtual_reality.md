@@ -1,7 +1,7 @@
 ---
-title: Disciplina - Jogos Digitais
-course: "Realidade Virtual 20221"
-coursepath: realidade-virtual20221
+title: Course - Virtual Reality
+course: "Virtual Reality"
+coursepath: realidade-virtual
 layout: classContent
 ---
 
