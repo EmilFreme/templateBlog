@@ -1,13 +1,13 @@
 ---
 layout: classContent
 title: "Experiência RV"
-course: "Realidade Virtual"
+course: "Virtual Reality"
 sectionNo: 0
-section: "Experiência RV"
+section: "XR Experience"
 lectureOrder: 1
-lecture: "Aula 01: Experiência RV"
+lecture: "Class 01: XR Experience"
 itemOrder: 0
 type: "Slides"
 ---
 
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vThWYuHP3VJQiH1hw4QVaU_jYVEdLHF6mBWds5vwWgzJ-pmg0FqVzNHryDDPZHj9ekdC_3SAu_TVmN6/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSAEVo08WcQ9PwdXTRsPK0ZPDpFiNGDju4awdf4jo68DZqm_XiMxJ1OnBBNHbLKe8ReMeeCcjWkk048/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>

@@ -7,9 +7,9 @@ layout: classContent
 
 # Bem vindo a disciplina de Realidade Virtual 
 
-- **Curso:** Engenharia da Computação - Sétimo Semestre -
+- **Curso:** Engenharia da Computação - Eletiva -
   [Insper](https://www.insper.edu.br/)
-- **Disciplina:** Jogos Digitais
+- **Disciplina:** Realidade Virtual
 - **Local:** Laborátorio de Realidade Virtual e Jogos Digitais
 - **Equipe:**
 	- Prof. Luciano Soares \<lpsoares at insper.edu.br\>
