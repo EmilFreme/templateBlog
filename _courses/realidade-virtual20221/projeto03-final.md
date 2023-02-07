@@ -1,7 +1,7 @@
 ---
 layout: classContent
 title: "Projeto Final"
-course: "Realidade Virtual"
+course: "Realidade Virtual 20221"
 sectionNo: 1
 section: "Projeto Final"
 lectureOrder: "99"

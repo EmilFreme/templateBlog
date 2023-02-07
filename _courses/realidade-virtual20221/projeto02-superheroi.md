@@ -1,7 +1,7 @@
 ---
 layout: classContent
 title: "Projeto Super-herói"
-course: "Realidade Virtual"
+course: "Realidade Virtual 20221"
 sectionNo: 1
 section: "Projeto Super-herói"
 lectureOrder: "99"

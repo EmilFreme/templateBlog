@@ -1,7 +1,7 @@
 ---
 layout: classContent
 title: "Atividade: Integrando o SteamVR no Unity"
-course: "Realidade Virtual"
+course: "Realidade Virtual 20221"
 sectionNo: 1
 section: "Experiência RV"
 lectureOrder: 2

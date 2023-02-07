@@ -1,7 +1,7 @@
 ---
 layout: classContent
 title: "Rastreamento RV"
-course: "Realidade Virtual"
+course: "Realidade Virtual 20221"
 sectionNo: 0
 section: "Experiência RV"
 lectureOrder: 2

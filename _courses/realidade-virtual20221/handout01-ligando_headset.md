@@ -1,7 +1,7 @@
 ---
 layout: classContent
 title: "Atividade: Colocando para funcionar o HTC Vive"
-course: "Realidade Virtual"
+course: "Realidade Virtual 20221"
 sectionNo: 1
 section: "Experiência RV"
 lectureOrder: 1

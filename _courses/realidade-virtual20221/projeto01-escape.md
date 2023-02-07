@@ -1,7 +1,7 @@
 ---
 layout: classContent
 title: "Documento do Projeto"
-course: "Realidade Virtual"
+course: "Realidade Virtual 20221"
 sectionNo: 0
 section: "Experiência RV"
 lectureOrder: "99"
