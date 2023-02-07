@@ -1,7 +1,7 @@
 ---
 layout: classContent
 title: "Atividade: Estereoscopia e Imagens 360 graus"
-course: "Realidade Virtual"
+course: "Realidade Virtual 20221"
 sectionNo: 1
 section: "Experiência RV"
 lectureOrder: 7

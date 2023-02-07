@@ -1,7 +1,7 @@
 ---
 layout: classContent
 title: "Metaverso"
-course: "Realidade Virtual"
+course: "Realidade Virtual 20221"
 sectionNo: 2
 section: "Metaverso"
 lectureOrder: 9

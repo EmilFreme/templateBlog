@@ -1,7 +1,7 @@
 ---
 layout: classContent
 title: "Shaders"
-course: "Realidade Virtual"
+course: "Realidade Virtual 20221"
 sectionNo: 3
 section: "Final"
 lectureOrder: 10
