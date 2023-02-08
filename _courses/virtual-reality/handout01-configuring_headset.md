@@ -3,7 +3,7 @@ layout: classContent
 title: "Activity: Configuring HTC Vive"
 course: "Virtual Reality"
 sectionNo: 1
-section: "Experiência RV"
+section: "XR Experience"
 lectureOrder: 1
 lecture: "Class 01: XR Experience"
 itemOrder: 1
