@@ -1,6 +1,6 @@
 ---
 layout: classContent
-title: "Atividade: Integrando o SteamVR no Unity"
+title: "Activity: Integrating SteamVR in Unity"
 course: "Virtual Reality"
 sectionNo: 1
 section: "XR Experience"
