@@ -1,7 +1,7 @@
 ---
 layout: classContent
 title: "Aula 08: Revisão"
-course: "Computação Gráfica"
+course: "Computação Gráfica 2021"
 sectionNo: 0
 section: "Rasterizador"
 lectureOrder: "7"

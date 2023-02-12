@@ -1,7 +1,7 @@
 ---
 layout: classContent
 title: "Aula 20: Materiais"
-course: "Computação Gráfica"
+course: "Computação Gráfica 2021"
 sectionNo: 0
 section: "RayTracing"
 lectureOrder: "4"

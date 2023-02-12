@@ -1,7 +1,7 @@
 ---
 layout: classContent
 title: "Aula 06: Sistema de Coordenadas"
-course: "Computação Gráfica"
+course: "Computação Gráfica 2021"
 sectionNo: 0
 section: "Rasterizador"
 lectureOrder: "5"

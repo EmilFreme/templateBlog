@@ -1,7 +1,7 @@
 ---
 layout: classContent
 title: "Projeto 2 - Ray Tracer: parte 2"
-course: "Computação Gráfica"
+course: "Computação Gráfica 2021"
 sectionNo: 0
 section: "RayTracing"
 lectureOrder: 99

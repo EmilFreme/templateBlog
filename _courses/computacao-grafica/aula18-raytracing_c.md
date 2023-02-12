@@ -1,7 +1,7 @@
 ---
 layout: classContent
 title: "Aula 18: Ray Tracing Parte 3"
-course: "Computação Gráfica"
+course: "Computação Gráfica 2021"
 sectionNo: 0
 section: "RayTracing"
 lectureOrder: "2"

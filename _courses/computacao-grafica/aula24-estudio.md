@@ -1,7 +1,7 @@
 ---
 layout: classContent
 title: "Aula 24: Estúdio"
-course: "Computação Gráfica"
+course: "Computação Gráfica 2021"
 sectionNo: 0
 section: "three.js"
 lectureOrder: "1"

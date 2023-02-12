@@ -1,7 +1,7 @@
 ---
 layout: classContent
 title: "Aula 13: Malhas e Pipeline de Renderização"
-course: "Computação Gráfica"
+course: "Computação Gráfica 2021"
 sectionNo: 0
 section: "Rasterizador"
 lectureOrder: "13"

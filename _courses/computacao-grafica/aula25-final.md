@@ -1,7 +1,7 @@
 ---
 layout: classContent
 title: "Aula 25: Final"
-course: "Computação Gráfica"
+course: "Computação Gráfica 2021"
 sectionNo: 0
 section: "three.js"
 lectureOrder: "2"

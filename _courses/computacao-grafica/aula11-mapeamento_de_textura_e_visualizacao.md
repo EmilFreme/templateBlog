@@ -1,7 +1,7 @@
 ---
 layout: classContent
 title: "Aula 11: Mapeamento de Texturas e Visualização"
-course: "Computação Gráfica"
+course: "Computação Gráfica 2021"
 sectionNo: 0
 section: "Rasterizador"
 lectureOrder: "10"

@@ -1,7 +1,7 @@
 ---
 layout: classContent
 title: "Aula 10: Interpolação em Triângulos"
-course: "Computação Gráfica"
+course: "Computação Gráfica 2021"
 sectionNo: 0
 section: "Rasterizador"
 lectureOrder: "9"

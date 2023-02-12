@@ -1,7 +1,7 @@
 ---
 layout: classContent
 title: "Projeto 3 - three.js"
-course: "Computação Gráfica"
+course: "Computação Gráfica 2021"
 sectionNo: 0
 section: "three.js"
 lectureOrder: 99

@@ -1,7 +1,7 @@
 ---
 layout: classContent
 title: "Aula 02: Triângulos e X3D"
-course: "Computação Gráfica"
+course: "Computação Gráfica 2021"
 sectionNo: 0
 section: "Rasterizador"
 lectureOrder: "1"
