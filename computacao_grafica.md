@@ -15,5 +15,6 @@ layout: classContent
   - Prof. Luciano Soares \<lpsoares at insper.edu.br\>
 	- Téc. Pedro Emil Freme \<pedrohepf at insper.edu.b\>
 
-O material de Computação Gráfica se encontra em:
-[https://lpsoares.github.io/ComputacaoGrafica/](https://lpsoares.github.io/ComputacaoGrafica/)
+
+
+## O material de Computação Gráfica se encontra em: [https://lpsoares.github.io/ComputacaoGrafica/](https://lpsoares.github.io/ComputacaoGrafica/)
