@@ -1,6 +1,6 @@
 ---
 layout: classContent
-title: "Applications"
+title: "Atividade: Locomoção com o SteamVR"
 course: "Virtual Reality"
 sectionNo: 1
 section: "XR Experience"
