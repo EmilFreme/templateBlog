@@ -4,7 +4,7 @@ title: "Locomotion"
 course: "Virtual Reality"
 sectionNo: 0
 section: "XR Experience"
-lectureOrder: 2
+lectureOrder: 3
 lecture: "Class 03: Locomotion"
 itemOrder: 0
 type: "Slides"

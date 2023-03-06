@@ -4,7 +4,7 @@ title: "Applications"
 course: "Virtual Reality"
 sectionNo: 0
 section: "XR Experience"
-lectureOrder: 2
+lectureOrder: 4
 lecture: "Class 04: Applications"
 itemOrder: 0
 type: "Slides"
