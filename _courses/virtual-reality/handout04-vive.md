@@ -1,10 +1,10 @@
 ---
 layout: classContent
-title: "Atividade: Interações pelo Vive"
+title: "Activity: Interactions by Vive Library"
 course: "Virtual Reality"
 sectionNo: 1
 section: "XR Experience"
-lectureOrder: 2
+lectureOrder: 4
 lecture: "Class 04: Applications"
 itemOrder: 1
 type: "Tutorial"

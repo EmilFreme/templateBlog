@@ -1,10 +1,10 @@
 ---
 layout: classContent
-title: "Atividade: Locomoção com o SteamVR"
+title: "Activity: Locomotion on SteamVR"
 course: "Virtual Reality"
 sectionNo: 1
 section: "XR Experience"
-lectureOrder: 2
+lectureOrder: 3
 lecture: "Class 04: Applications"
 itemOrder: 1
 type: "Tutorial"
