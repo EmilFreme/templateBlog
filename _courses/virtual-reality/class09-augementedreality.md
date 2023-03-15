@@ -1,11 +1,11 @@
 ---
 layout: classContent
-title: "Performance"
+title: "Augmented Reality"
 course: "Virtual Reality"
 sectionNo: 0
 section: "Augmented Reality"
-lectureOrder: 8
-lecture: "Class 08: 3D Scan"
+lectureOrder: 9
+lecture: "Class 09: Augmented Reality"
 itemOrder: 0
 type: "Slides"
 ---
