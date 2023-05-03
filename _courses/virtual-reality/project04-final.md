@@ -3,7 +3,7 @@ layout: classContent
 title: "Projeto Document"
 course: "Virtual Reality"
 sectionNo: 0
-section: "Final"
+section: "Final Project"
 lectureOrder: "99"
 lecture: "Final"
 itemOrder: "99"
